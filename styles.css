@@ -10,10 +10,10 @@ html,body {
 }
 
 .affix {
-  -webkit-transition:padding 0.2s ease-in;
-  -moz-transition:padding 0.2s ease-in;  
-  -o-transition:padding 0.2s ease-in;         
-  transition:padding 0.2s ease-in;
+  -webkit-transition:padding 0.1s ease-out;
+  -moz-transition:padding 0.1s ease-out;  
+  -o-transition:padding 0.1s ease-out;         
+  transition:padding 0.1s ease-out;
 }
 
 @media (min-width:768px) {
@@ -22,10 +22,10 @@ html,body {
       background:transparent;
       border-color:transparent;
       padding: 15px;
-      -webkit-transition:all 0.5s ease;
-      -moz-transition:all 0.5s ease; 
-      -o-transition:all 0.5s ease;         
-      transition:all 0.5s ease;  
+      -webkit-transition:all 0.2s ease;
+      -moz-transition:all 0.2s ease; 
+      -o-transition:all 0.2s ease;         
+      transition:all 0.2s ease;  
     }
 }
 
