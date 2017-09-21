@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+  <html>
+  
+  <head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script src='masonry.pkgd.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .item {
+        width:  50px;
+        height: 50px;
+        float: left;
+        background: #2296DD;
+        border: 2px solid #333;
+      }
+
+      .item.thumbnail {
+        width:  100px;
+        height: 100px;
+        background: #cfcfcf
+      }
+
+      .item.medium {
+        width:  150px;
+        height: 50px;
+        background: #A6E392
+      }
+
+      .item.large {
+        width:  200px;
+        height: 100px;
+        background: #D092E3
+      }
+    </style>
+    
+  </head>
+
+  <title> Taylor Quinn </title>
+
+<body>
+  <header>
+    <div id="header_pic" class="h3">
+      <h1 class="hname"> K TAYLOR QUINN</h1>
+    </div>
+    <div id="header_nav">
+      <nav>
+        <ul class="navi">
+          <li class="current"><a href="index.html" stickydata-hover="Home">Home</a></li>
+          <li><a href="/html/resume.html" data-hover="Resume">Resume</a></li>
+          <li><a href="/photos.html" data-hover="Projects">Projects</a></li>
+          <li><a href="/html/contact.html" data-hover="Contact">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+ </header>
+<div id = "content">
+  	<div class="bgimg-2">
+  		<div class="caption">
+   		 <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CHECK OUT NEW PHOTOS</span>
+  		</div>
+	</div>
+
+  <div>
+    <div id='masonry'>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item thumbnail"></div>
+      <div class="item medium"></div>
+      <div class="item"></div>
+      <div class="item large"></div>
+      <div class="item"></div>
+      <div class="item medium"></div>
+    </div>
+
+  </div>
+
+
+<script>
+  var container = document.querySelector('#masonry');
+  var masonry = new Masonry(container, {
+    columnWidth: 50,
+    itemSelector: '.item'
+  });
+</script>
+
+
+</div>
+
+
+
+
+ 
+</body>
+
+  </html>
