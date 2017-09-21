@@ -1,120 +1,46 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
+html,body {
+  height:100%;
 }
 
-#wrapper{
-  min-width: 700px;
+.first {
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+  background-image:url('https://images.unsplash.com/photo-1470434151738-dc5f4474c239?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb');
 }
 
-/*HEADER****************************************************************/
+.affix {
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
 
-#navbar{
-  background-color:transparent !important;
-  border-color:transparent;
-  background-image:none;
-  box-shadow:none;
 }
 
-#navbar.navbar-inverse{
-  margin-bottom: 0px; 
+@media (min-width:768px) {
+    .affix-top {
+      /* navbar style at top */
+      background:transparent;
+      border-color:transparent;
+      padding: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
+    }
 }
 
-.custom_nav .navbar.navbar-fixed-top .navbar-inner{
-    /*background: rgba(255, 255, 255, 0.3);*/
-    margin-bottom: 0px; 
+.affix-top .nav>li>a {
+   color: #000;
 }
 
-
-/*COMMON ELEMENTS*******************************************************************/
-/*HOME*/
-
-.bgimg-0,.bigimg-1 {
-  position: relative;
-  opacity: 0.9;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
+.affix-top.navbar .nav>li>a:hover,
+.affix-top.navbar .navbar-brand
+{
+   color: #333;
 }
 
-.bgimg-0 {
-  background-image: url("images/split_croatia_beach.JPG");
-  min-height: 500px;
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
 }
-
-.bgimg-1{
-  background-image: url("images/split_croatia_beach.JPG");
-  min-height: 500px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h1 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #b3b3b3;
-  margin-bottom: 0px;
-}
-h2 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font: 14px "Lato", sans-serif;
-  color: #b3b3b3;
-  margin-bottom: 0px;
-}
-/*NAV BAR**********************************************************************************/
-
-
-#primary-nav {
-  /*clear: both;
-  padding: 5px;*/
-}
-
-#primary-nav li {
-  display: inline;
-  margin: 0 5px; padding: 0;
-}
-
-
-#primary-nav li a {
-  text-decoration: none;
-  color: #666;
-  padding: 5px;
-}
-
-
-#primary-nav li input{
-  text-decoration: none;
-  color: #666;
-  padding: 5px;
-}
-
-#primary-nav li a:hover {
-  color: #000;
-}
-
-#selected-nav:link,
-#selected-nav:visited {
-  color: #ccc;
-}
-
