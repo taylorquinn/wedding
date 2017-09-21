@@ -22,7 +22,7 @@ body, html {
 /*COMMON ELEMENTS*******************************************************************/
 /*HOME*/
 
-.bgimg-0 {
+.bgimg-0,.bigimg-1 {
   position: relative;
   opacity: 0.9;
   background-attachment: fixed;
@@ -33,6 +33,10 @@ body, html {
 }
 
 .bgimg-0 {
+  background-image: url("images/split_croatia_beach.JPG");
+  min-height: 500px;
+}
+.bgimg-1{
   background-image: url("images/split_croatia_beach.JPG");
   min-height: 500px;
 }
