@@ -89,3 +89,40 @@ h2 {
   font: 20px "Lato", sans-serif;
   color: white;
 }
+
+/*NAV BAR**********************************************************************************/
+
+
+#primary-nav {
+  clear: both;
+  padding: 5px;
+}
+
+#primary-nav li {
+  display: inline;
+  margin: 0 5px; padding: 0;
+}
+
+
+#primary-nav li a {
+  text-decoration: none;
+  color: #666;
+  padding: 5px;
+}
+
+
+#primary-nav li input{
+  text-decoration: none;
+  color: #666;
+  padding: 5px;
+}
+
+#primary-nav li a:hover {
+  color: #000;
+}
+
+#selected-nav:link,
+#selected-nav:visited {
+  color: #ccc;
+}
+
