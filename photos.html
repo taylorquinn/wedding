@@ -41,37 +41,6 @@ var toggleDisplay=function(el,display,class_el){
 var font_body = 'PT Sans',
     font_code = 'Roboto Mono';
 
-/*if(window.showAds === undefined) {
-  setTimeout(function() {
-    var w = document.querySelector('.wrapper');
-    if (typeof ga !== 'undefined') {
-        ga('send', 'event', 'Adblock', 'Yes', {'nonInteraction': 1}); 
-    } else if (typeof _gaq !== 'undefined') {
-        _gaq.push(['_trackEvent', 'Adblock', 'Yes', undefined, undefined, true]);
-    }
-
-    var ab_a = document.createElement("div"),
-        w_p = w.parentNode;
-        w_p.classList.add("ab-active");
-    ab_a.setAttribute("class", "ab-alert");
-    w_p.parentNode.insertBefore(ab_a, w_p);
-    ab_a.innerHTML = '<p>I never intend to spoil your experience here, but this is important. I want to share with you that this website exists totally because of adverts money.</p><p>If you whitelist my website in your adblocker software, I won\'t show you more than two Google ads per page, and no popups. It\'s a promise.</p><p>Thanks for your patience :-)</p><p class="small" style="opacity: .75">This message disappears by itself in 15 seconds.</p>';
-
-    var ab = document.querySelector(".ab-alert");
-
-    document.documentElement.setAttribute("oncontextmenu", "return false");
-
-    style('.ab-alert{box-sizing:border-box;font-family:'+font_body+';line-height:1.75}.site-wrapper{transition: opacity .5s ease-in-out;}.ab-active{ opacity: .0125; pointer-events: none;position:fixed;width:100%;}.ab-alert,.ab-active{user-select:none;}.ab-alert{opacity: 1;transition: opacity .5s ease-in-out;font-size: 15px;position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;max-width: 450px; background-color: white; padding: 2.5em}');
-
-    setInterval( function() {
-        ab.style.opacity = "0";
-        ab.remove();
-        w_p.classList.remove("ab-active");
-        document.documentElement.removeAttribute("oncontextmenu");
-    }, 15000);
-  }, 1000);
-}*/
-
 var WebFontConfig = {
     google: {
         families: [font_body, font_code]
@@ -87,42 +56,7 @@ window.onload = function() {
   script("https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js");
 }</script>
 
-    <!--style>
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      .item {
-        width:  600px;
-        height: 600px;
-        float: left;
-        background: #2296DD;
-      }
-
-      .item.thumbnail {
-        width:  400px;
-        height: 400px;
-        background: #cfcfcf
-      }
-
-      .item.landscape {
-        width:  350px;
-        height: 525px;
-        background: #A6E392
-      }
-
-      .item.portrait {
-        width:  525px;
-        height: 350px;
-        background: #D092E3
-      }
-      img {
-          max-width: auto;
-          max-height: 100%;
-      }
-    </style-->
+   
     <style>body {
   background: #f9f9f9;
   color: #465665;
@@ -319,7 +253,8 @@ a {
 
  <div class="masonry">
       <div class="brick">
-        <img src="https://lh3.googleusercontent.com/Z6QBh_jHNXVbEQyRz9IJXRbS7zMLsmQSp_ntGN4FWpkNANiSlhJV06jis4JX9o4PpSTednt2-d4lTMFuQGLWANNAVvSiyQSfVdnqfP7jed120PbZ_q4yz_HhGhq1vZhHeL4bbcD4iCZJgRvNonGTFtALG7jVDEn2IKnc57_OA57l7odhvBbe25ycU1qWPn-fj1uHFEPwPGEJQz6_5PWWmawnZKpR6Nufi1EKMglC9uCLnhvs8apRWd7xMg3oDcsigdssiBsm35FyhwY8Cl4l9q3qtWbRgMZGD0sOI8-IAz62hY7kkb38ajKzTka249n4hdQ8zqi_3-NWKPi2hsayKP0TaMOirUo63lGwZhw0B-IhmzaQOj4y41fBXN7m9hDk4kXPUdkvA8HXIrJdQL2vFs05ix_JMc_aw62TSWLGCc6BJX3GMCZaHJoFwULNGP826Xwi8sduK592NUcWewG4ew57uGvNYrAiha-4_ogKTMpXYWj1saZzmA-KWNsyT-6KQXH3MG0ZhCroU2yy469Gg-23l0oSxHNpyhYjnSgm5Yw0xZxXgUnO9EGKzIGCHIJPIDOvJOW9wmcesQcNayev3zGxan44Qr9mGQ1QtqWWV1b9UaAB=s1200">
+       <img src = "images/Croatia/DSC_0003.jpg">
+        <!--<img src="https://lh3.googleusercontent.com/Z6QBh_jHNXVbEQyRz9IJXRbS7zMLsmQSp_ntGN4FWpkNANiSlhJV06jis4JX9o4PpSTednt2-d4lTMFuQGLWANNAVvSiyQSfVdnqfP7jed120PbZ_q4yz_HhGhq1vZhHeL4bbcD4iCZJgRvNonGTFtALG7jVDEn2IKnc57_OA57l7odhvBbe25ycU1qWPn-fj1uHFEPwPGEJQz6_5PWWmawnZKpR6Nufi1EKMglC9uCLnhvs8apRWd7xMg3oDcsigdssiBsm35FyhwY8Cl4l9q3qtWbRgMZGD0sOI8-IAz62hY7kkb38ajKzTka249n4hdQ8zqi_3-NWKPi2hsayKP0TaMOirUo63lGwZhw0B-IhmzaQOj4y41fBXN7m9hDk4kXPUdkvA8HXIrJdQL2vFs05ix_JMc_aw62TSWLGCc6BJX3GMCZaHJoFwULNGP826Xwi8sduK592NUcWewG4ew57uGvNYrAiha-4_ogKTMpXYWj1saZzmA-KWNsyT-6KQXH3MG0ZhCroU2yy469Gg-23l0oSxHNpyhYjnSgm5Yw0xZxXgUnO9EGKzIGCHIJPIDOvJOW9wmcesQcNayev3zGxan44Qr9mGQ1QtqWWV1b9UaAB=s1200">-->
       </div>
       <div class="brick">
         <img src="https://lh3.googleusercontent.com/OHluRJFZ6GwwXjQcbKlgm3RSMQyy1HrpXSRetGv0kZWbwZk2DZrRqqJle32lMkAVooXNmgsoSaizjrtPwMSyrWVAsKXKzm4WXn2Iwn20bJ0MrK2nDJhZudBKlZ0KdcG5b5RU48YletVAbWHNPlUJSM7K8ClIcvSzeAerocMiscXxWYxuBQHo5es-Aikc1cd6UKsNTs6sCdA0jdS7ksJPKGO8CT9Q6RKYbEBOlPV-pWYnZe-3ksB75TKatnBARaHK-raaLTIBX5RxwFzKjTo5uLWbqpnuNTa7Qd_CDnB8-nokNSrDyaiF-miPiR5AhrK6O2Y-KgpCsjjaJDRkQ9JeayX-5GG2iVEigGzP_yHyO6Byd5qSto5ujUqsqGskXS_E2mz_1lDe8ig_j_kAZ1XV6hIv9GCvmlI0Hy0uoSPYfF73kPoMQ9w7vvSpL1SFpqeQpJwcSWPkdZhcUCVlAX55XdZqvNic983LCK4bSRk80hBHOXSNi8jSNitgHJES2dOcWVwl3Zn9M6exiptcn3Ezk3iDDDBTuz2e8jL9M1zl6yp2I5n-_-5Th4wHA6Fik71vD0tUlwWPg0HndzzF0V1WbCjapAaKMeRo_ymEHjiOhl6t41_P=w1152-h768-no">
