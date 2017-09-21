@@ -1,3 +1,3 @@
-# Splattered
+# Taylor Quinn
 
-Buy and sell your paintings, photographs, clothing, accessories, and home decor while blogging about it! :D
+~This is a work in progress~
