@@ -51,7 +51,7 @@
 <body>
   
 <body>
-  <header>
+ <header>
     <div id="header_pic" class="h3">
       <h1 class="hname"> K TAYLOR QUINN</h1>
     </div>
@@ -60,7 +60,7 @@
         <ul class="navi">
           <li class="current"><a href="index.html" stickydata-hover="Home">Home</a></li>
           <li><a href="/html/resume.html" data-hover="Resume">Resume</a></li>
-          <li><a href="/photos.html" data-hover="Photographs">Photographs</a></li>
+          <li><a href="/photos.html" data-hover="Photograph">Photographs</a></li>
           <li><a href="/html/contact.html" data-hover="Contact">Contact</a></li>
 
         </ul>
@@ -68,21 +68,16 @@
     </div>
 
 
-  <div id="wrapper">
-    <section name="Home" id="Home"></section>
-  </div>
- 
-
 <div id = "content">
-  	<div class="bgimg-2">
-  		<div class="caption">
-   		 <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CHECK OUT NEW PHOTOS</span>
-  		</div>
-	</div>
+    <div class="bgimg-2">
+      <div class="caption">
+       <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CHECK OUT NEW PHOTOS</span>
+      </div>
   </div>
-</header>
+</div>
 
-  <div>
+<section name="imagegallery" >
+   <div>
     <div id='masonry'>
       <div class="item"></div>
       <div class="item"></div>
@@ -97,20 +92,28 @@
   </div>
 
 
-<script>
-  var container = document.querySelector('#masonry');
-  var masonry = new Masonry(container, {
-    columnWidth: 50,
-    itemSelector: '.item'
-  });
-</script>
+    <script>
+      var container = document.querySelector('#masonry');
+      var masonry = new Masonry(container, {
+        columnWidth: 50,
+        itemSelector: '.item'
+      });
+    </script>
+
+</section>
 
 
-</div>
+  <div id="wrapper">
+    <section name="Home" id="Home"></section>
+    <section name="About" id="About"></section>
+    <section name="Gallery" id="Gallery"></section>
+    <section name="Literature" id="Literature"></section>
+    <section name="Contact" id="Contact"></section>
+  </div>
+  </header>
+</body>
 
-
-
-
+ 
  
 </body>
 
