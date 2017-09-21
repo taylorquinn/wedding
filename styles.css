@@ -28,7 +28,7 @@ body {
 .h3 {
   height: 10em;
   position: relative;
-  background-image: url("http://static1.squarespace.com/static/547bf0d6e4b0a3a6c5c33f15/560b3d12e4b00a287e5b336e/564bc213e4b037eed36f135d/1447805465015/567A8231-3.jpg?format=750w");
+  background-image: url("images/split_croatia_beach.JPG");
   background-repeat: no-repeat;
   background-size: 100%;
  
@@ -156,4 +156,21 @@ nav {
   font-family: 'source-sans';
   height: 300px;
   padding-top: 50px;
+}
+
+
+/*-----------------HOME CONTENT--------------------*/
+.bgimg-0, .bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-2 {
+  background-image: url("images/split_croatia_beach.JPG");
+  min-height: 400px;
 }
