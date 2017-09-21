@@ -6,7 +6,7 @@ html,body {
   height:100vh;
   min-height:400px;
   background-size:cover;
-  background-image:url("images/split_croatia_beach.JPG");
+  background-image:url('images/split_croatia_beach.JPG');
 }
 
 .affix {
