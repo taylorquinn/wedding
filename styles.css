@@ -11,7 +11,7 @@ body, html {
 
 /*HEADER****************************************************************/
 
-.navbar{
+#navbar{
   background-color:transparent !important;
   border-color:transparent;
   background-image:none;
