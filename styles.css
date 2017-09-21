@@ -9,6 +9,16 @@ body, html {
   min-width: 700px;
 }
 
+/*HEADER****************************************************************/
+
+.navbar{
+  background-color:transparent !important;
+  border-color:transparent;
+  background-image:none;
+  box-shadow:none;
+}
+
+
 /*COMMON ELEMENTS*******************************************************************/
 /*HOME*/
 
