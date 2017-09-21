@@ -1,147 +1,43 @@
-
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codeply preview</title>
-  <base target="_self">
-  <meta name="description" content="How to make a Bootstrap navbar transparent over background image at the top of the page. The navbar changes to fixed navbar as the page scrolls. Animated transition between navbar states." />
-  <meta name="google" value="notranslate">
-  <link rel="shortcut icon" href="/images/cp_ico.png">
 
+  <html>
   
-  <!--stylesheets / link tags loaded here-->
+  <head>
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="styles.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
+  </head>
 
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
- 
+  <title> NAME </title>
 
-</head>
-<body >
-  
-  <div>
-  <div id="nav" class="navbar navbar-inverse navbar-fixed-top" data-spy="affix">
-    <div class="container">
-        <div class="navbar-header">
-      <a href="#" class="navbar-brand">Brand</a>
-      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-bars"></i>
-      </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-        <ul class="nav pull-right navbar-nav">
-          <li>
-           <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#"><span class="badge">2</span></a>
-          </li>
-        </ul>
-      </div>		
+<body>
+  <header>
+    <div id="header_pic" class="h3">
+      <h1 class="hname"> NAME</h1>
     </div>
-  </div><!-- /.navbar -->
-</div>
+    <div id="header_nav">
+      <nav>
+        <ul class="navi">
+          <li class="current"><a href="index.html" stickydata-hover="Home">Home</a></li>
+          <li><a href="/html/resume.html" data-hover="Resume">Resume</a></li>
+          <li><a href="/html/project.html" data-hover="Projects">Projects</a></li>
+          <li><a href="/html/contact.html" data-hover="Contact">Contact</a></li>
 
-<section class="first">
+        </ul>
+      </nav>
+    </div>
 
-  <div class="container">
-  
-    
+  <div id="wrapper">
+    <section name="Home" id="Home"></section>
+    <section name="About" id="About"></section>
+    <section name="Gallery" id="Gallery"></section>
+    <section name="Literature" id="Literature"></section>
+    <section name="Contact" id="Contact"></section>
   </div>
-
-</section>
-
-<section id="services">
-
-  <div class="container">
-  
-    <h1>Services.. here is some more content</h1>
-    
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-  
-    <h1>Here is some more content</h1>
-    
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-  
-    <h1>Here is some more content</h1>
-    
-  </div>
-
-</section>
-  
-  <script>
-    // sandbox disable popups
-    if (window.self !== window.top && window.name!="view1") {;
-      window.alert = function(){/*disable alert*/};
-      window.confirm = function(){/*disable confirm*/};
-      window.prompt = function(){/*disable prompt*/};
-      window.open = function(){/*disable open*/};
-    }
-    
-    // prevent href=# click jump
-    document.addEventListener("DOMContentLoaded", function() {
-      var links = document.getElementsByTagName("A");
-      for(var i=0; i < links.length; i++) {
-        if(links[i].href.indexOf('#')!=-1) {
-          links[i].addEventListener("click", function(e) {
-          console.debug("prevent href=# click");
-              if (this.hash) {
-                if (this.hash=="#") {
-                  e.preventDefault();
-                  return false;
-                }
-                else {
-                  /*
-                  var el = document.getElementById(this.hash.replace(/#/, ""));
-                  if (el) {
-                    el.scrollIntoView(true);
-                  }
-                  */
-                }
-              }
-              return false;
-          })
-        }
-      }
-    }, false);
-  </script>
-  
-  <!--scripts loaded here-->
-  
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  
-  
-  <script>
-  /* affix the navbar after scroll below header */
-$('#nav').affix({
-      offset: {
-        top: $('#services').offset().top
-      }
-});	
-  </script>
-
+  </header>
 </body>
 
-</html>
+
+  </html>

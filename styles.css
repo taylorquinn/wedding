@@ -1,46 +1,159 @@
-html,body {
-  height:100%;
+/*--------------------HEAD--------------------*/
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.first {
-  height:100vh;
-  min-height:400px;
-  background-size:cover;
-  background-image:url('images/split_croatia_beach.JPG');
+/*--------------------NAME TITLE--------------------*/
+.hname {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 10px;
+  transition: all 500ms linear;
+  margin: 0;
+  margin-left: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-size: 200%;
 }
 
-.affix {
-  -webkit-transition:padding 0.2s ease-out;
-  -moz-transition:padding 0.2s ease-out;  
-  -o-transition:padding 0.2s ease-out;         
-  transition:padding 0.2s ease-out;
-
+.hname:hover {
+  letter-spacing: 15px;
 }
 
-@media (min-width:768px) {
-    .affix-top {
-      /* navbar style at top */
-      background:transparent;
-      border-color:transparent;
-      padding: 15px;
-      -webkit-transition:all 0.5s ease;
-      -moz-transition:all 0.5s ease; 
-      -o-transition:all 0.5s ease;         
-      transition:all 0.5s ease;  
-    }
+.h3 {
+  height: 10em;
+  position: relative;
+  background-image: url("http://static1.squarespace.com/static/547bf0d6e4b0a3a6c5c33f15/560b3d12e4b00a287e5b336e/564bc213e4b037eed36f135d/1447805465015/567A8231-3.jpg?format=750w");
+  background-repeat: no-repeat;
+  background-size: 100%;
+ 
 }
 
-.affix-top .nav>li>a {
-   color: #000;
+
+/*--------------------HEADER--------------------*/
+
+header {
+  width: 100%;
+  height: 650px;
 }
 
-.affix-top.navbar .nav>li>a:hover,
-.affix-top.navbar .navbar-brand
-{
-   color: #333;
+#header_pic {
+  background-color: white;
+  height: 650px;
 }
 
-section {
-  height:calc(90% - 50px);
-  height: 90vh;
+#header_nav {
+  width: 100%;
+  background-color:  white;
+  height: 50px;
+  z-index: 5;
+}
+
+.fixed {
+  top: 0px;
+  position: fixed;
+}
+
+
+/*--------------------MY NAVIGATION--------------------*/
+
+.navi {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navi * {
+  box-sizing: border-box;
+}
+
+.navi li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  padding: 0;
+}
+
+.navi a {
+  padding: 0.5em 0;
+  color: #686868;
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navi a:before {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  top: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: lightblue;
+}
+
+.navi a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: black;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+
+.navi a:hover:before,
+.navi .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.navi a:hover:after,
+.navi .current a:after {
+  max-width: 100%;
+}
+
+
+/*--------------------NAVIGATION--------------------*/
+
+nav {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+/*--------------------CONTENT--------------------*/
+
+#wrapper {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+#Home,
+#About,
+#Gallery,
+#Literature,
+#Contact {
+  text-align: center;
+  color: #222222;
+  font-family: 'source-sans';
+  height: 300px;
+  padding-top: 50px;
 }
