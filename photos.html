@@ -9,7 +9,8 @@
     <script src='masonry.pkgd.min.js'></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
-<script>var script = function(src) {
+<script>
+var script = function(src) {
     var e = document.createElement('script');
     e.async = true;
     e.src = src;
@@ -40,7 +41,7 @@ var toggleDisplay=function(el,display,class_el){
 var font_body = 'PT Sans',
     font_code = 'Roboto Mono';
 
-if(window.showAds === undefined) {
+/*if(window.showAds === undefined) {
   setTimeout(function() {
     var w = document.querySelector('.wrapper');
     if (typeof ga !== 'undefined') {
@@ -69,7 +70,7 @@ if(window.showAds === undefined) {
         document.documentElement.removeAttribute("oncontextmenu");
     }, 15000);
   }, 1000);
-}
+}*/
 
 var WebFontConfig = {
     google: {
@@ -202,13 +203,13 @@ a {
   transition: all .5s ease-in-out;
   -moz-column-gap: 30px;
   -webkit-column-gap: 30px;
-  column-gap: 30px;
+  column-gap: 10px;
   -moz-column-fill: initial;
   -webkit-column-fill: initial;
   column-fill: initial;
 }
 .masonry .brick {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .masonry .brick img {
   -moz-transition: all .5s ease-in-out;
