@@ -7,7 +7,7 @@ body {
 /*--------------------NAME TITLE--------------------*/
 .hname {
   font-family: 'Raleway', Arial, sans-serif;
-  color: white;
+  color: #ededed;
   position: relative;
   text-transform: uppercase;
   font-weight: 500;
