@@ -1,16 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
-
-      
+<html >
 <head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="public/js/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="scripts.js"></script>
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codeply preview</title>
+  <base target="_self">
+  <meta name="description" content="How to make a Bootstrap navbar transparent over background image at the top of the page. The navbar changes to fixed navbar as the page scrolls. Animated transition between navbar states." />
+  <meta name="google" value="notranslate">
+  <link rel="shortcut icon" href="/images/cp_ico.png">
 
-<body>
-<div>
+  
+  <!--stylesheets / link tags loaded here-->
+
+
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+  
+  <!--scripts loaded here-->
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+
+  <style type="text/css">html,body {
+  height:100%;
+}
+
+.first {
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+  background-image:url('https://images.unsplash.com/photo-1470434151738-dc5f4474c239?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb');
+}
+
+.affix {
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
+
+}
+
+@media (min-width:768px) {
+    .affix-top {
+      /* navbar style at top */
+      background:transparent;
+      border-color:transparent;
+      padding: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
+    }
+}
+
+.affix-top .nav>li>a {
+   color: #000;
+}
+
+.affix-top.navbar .nav>li>a:hover,
+.affix-top.navbar .navbar-brand
+{
+   color: #333;
+}
+
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
+}
+</style>
+
+</head>
+<body >
+  
+  <div>
   <div id="nav" class="navbar navbar-inverse navbar-fixed-top" data-spy="affix">
     <div class="container">
         <div class="navbar-header">
@@ -75,4 +141,55 @@
   </div>
 
 </section>
+  
+  <script>
+    // sandbox disable popups
+    if (window.self !== window.top && window.name!="view1") {;
+      window.alert = function(){/*disable alert*/};
+      window.confirm = function(){/*disable confirm*/};
+      window.prompt = function(){/*disable prompt*/};
+      window.open = function(){/*disable open*/};
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        if(links[i].href.indexOf('#')!=-1) {
+          links[i].addEventListener("click", function(e) {
+          console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash=="#") {
+                  e.preventDefault();
+                  return false;
+                }
+                else {
+                  /*
+                  var el = document.getElementById(this.hash.replace(/#/, ""));
+                  if (el) {
+                    el.scrollIntoView(true);
+                  }
+                  */
+                }
+              }
+              return false;
+          })
+        }
+      }
+    }, false);
+  </script>
+  
+
+  
+  
+  <script>
+  /* affix the navbar after scroll below header */
+$('#nav').affix({
+      offset: {
+        top: $('#services').offset().top
+      }
+});	
+  </script>
+
 </body>
+</html>
