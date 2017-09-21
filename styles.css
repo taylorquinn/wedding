@@ -14,7 +14,6 @@ html,body {
   -moz-transition:padding 0.2s ease-out;  
   -o-transition:padding 0.2s ease-out;         
   transition:padding 0.2s ease-out;
-
 }
 
 @media (min-width:768px) {
