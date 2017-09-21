@@ -10,10 +10,10 @@ html,body {
 }
 
 .affix {
-  -webkit-transition:padding 0.2s ease-out;
-  -moz-transition:padding 0.2s ease-out;  
-  -o-transition:padding 0.2s ease-out;         
-  transition:padding 0.2s ease-out;
+  -webkit-transition:padding 0.2s ease-in;
+  -moz-transition:padding 0.2s ease-in;  
+  -o-transition:padding 0.2s ease-in;         
+  transition:padding 0.2s ease-in;
 }
 
 @media (min-width:768px) {
