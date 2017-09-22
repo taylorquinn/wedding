@@ -121,8 +121,8 @@
             }
         },
        
-      done: function(datamap) {
-        if (geography.properties.fillKey=="authorHasTraveledTo"){
+      done: function(datamap, geography) {
+        if (geography.properties.fillKey.equals("authorHasTraveledTo")){
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }}
