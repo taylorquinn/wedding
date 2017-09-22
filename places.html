@@ -176,8 +176,8 @@
             //highlightBorderWidth: 2,
             // don't change color on mouse hover
             highlightFillColor: function(geo, data) {
-                if (!data) { return ; }
-                return geo['fillColor'] || '#fa0fa0';
+                if (!data) { '#ABDDA4'; }
+                return '#fa0fa0';
             },
             // only change border
 
@@ -193,10 +193,10 @@
                     '</div>'].join('');
             }
         },
-      done: function(datamap) {
+      done: function(datamap, geo, data) {
           if (!data) { return ; }
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-              alert(geography.properties.name);
+              alert(geo.properties.name);
           }); }
     });
 
