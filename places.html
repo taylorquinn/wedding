@@ -175,11 +175,12 @@
             //borderColor: '#DEDEDE',
             //highlightBorderWidth: 2,
             // don't change color on mouse hover
-            /*highlightFillColor: function(geo) {
-                return geo['fillColor'] || '#b5c6e0';
-            },*/
+            highlightFillColor: function(geo) {
+                if (!data) { return ; }
+                return geo['fillColor'] || '#fa0fa0';
+            },
             // only change border
-            highlightFillColor: none,
+
             highlightBorderColor: '#c9c9c9',
             borderWidth: 1,
             // show desired information in tooltip
