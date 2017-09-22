@@ -121,10 +121,10 @@
             }
         },
        
-      done: function(datamap) {
+      done: function(datamap, geo) {
         
-          datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-              alert(geography.properties.fillKey);
+          datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography, geo) {
+              alert(geo['fillKey'];
               alert(geography.properties.name);
           }); }
     });
