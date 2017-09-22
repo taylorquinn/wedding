@@ -218,14 +218,14 @@ h3 {
 
 /* Effect 4: fall perspective */
 /*.grid.effect-4 {*//
-.grid {
+.grid.effect-3 {
   max-width: 69em;
   list-style: none;
   margin: 30px auto;
   padding: 0;
 }
 
-.grid li {
+.grid.effect-3 li {
   display: block;
   float: left;
   padding: 7px;
@@ -233,14 +233,14 @@ h3 {
   opacity: 0;
 }
 
-.grid li.shown,
-.no-js .grid li,
-.no-cssanimations .grid li {
+.grid.effect-3 li.shown,
+.no-js .grid.effect-3 li,
+.no-cssanimations .grid.effect-3 li {
   opacity: 1;
 }
 
-.grid li a,
-.grid li img {
+.grid.effect-3 li a,
+.grid.effect-3 li img {
   outline: none;
   border: none;
   display: block;
