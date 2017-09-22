@@ -124,7 +124,7 @@
       done: function(datamap, geo) {
         
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography, geo) {
-              if(geography.properties.name.equals("Canada")){
+              if(geography.properties.name == "Canada"){
               alert(geography.properties.name);}
           }); }
     });
