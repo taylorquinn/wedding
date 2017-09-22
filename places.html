@@ -67,7 +67,7 @@
     },
     data: {
       USA: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0", article:"true"},
-      CAN: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      CAN: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0", article:"true"},
       ITA: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
       CHE: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
       AUT: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
@@ -120,9 +120,9 @@
                     '</div>'].join('')};
             }
         },
-        if (geo['article'] == true){
+       
       done: function(datamap, geo) {
-        
+        if (geo['article'].equals("true")){
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }}
