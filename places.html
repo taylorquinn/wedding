@@ -141,35 +141,35 @@
       authorHasTraveledTo: "#fa0fa0"
     },
     data: {
-      USA: { fillKey: "authorHasTraveledTo" },
-      CAN: { fillKey: "authorHasTraveledTo" },
-      ITA: { fillKey: "authorHasTraveledTo" },
-      CHE: { fillKey: "authorHasTraveledTo" },
-      AUT: { fillKey: "authorHasTraveledTo" },
-      BEL: { fillKey: "authorHasTraveledTo" },
-      BGR: { fillKey: "authorHasTraveledTo" },
-      BHS: { fillKey: "authorHasTraveledTo" },
-      BIH: { fillKey: "authorHasTraveledTo" },
-      BMU: { fillKey: "authorHasTraveledTo" },
-      DEU: { fillKey: "authorHasTraveledTo" },
-      DNK: { fillKey: "authorHasTraveledTo" },
-      ESP: { fillKey: "authorHasTraveledTo" },
-      GBR: { fillKey: "authorHasTraveledTo" },
-      GRC: { fillKey: "authorHasTraveledTo" },
-      HRV: { fillKey: "authorHasTraveledTo" },
-      IRL: { fillKey: "authorHasTraveledTo" },
-      LUX: { fillKey: "authorHasTraveledTo" },
-      MAR: { fillKey: "authorHasTraveledTo" },
-      MLT: { fillKey: "authorHasTraveledTo" },
-      MNE: { fillKey: "authorHasTraveledTo" },
-      MCO: { fillKey: "authorHasTraveledTo" },
-      NLD: { fillKey: "authorHasTraveledTo" },
-      PRT: { fillKey: "authorHasTraveledTo" },
-      SVK: { fillKey: "authorHasTraveledTo" },
-      VIR: { fillKey: "authorHasTraveledTo" },
-      MCO: { fillKey: "authorHasTraveledTo" },
-      FRA: { fillKey: "authorHasTraveledTo" },
-      SWE: { fillKey: "authorHasTraveledTo" },
+      USA: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      CAN: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      ITA: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      CHE: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      AUT: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      BEL: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      BGR: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      BHS: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      BIH: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      BMU: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      DEU: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      DNK: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      ESP: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      GBR: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      GRC: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      HRV: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      IRL: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      LUX: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      MAR: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      MLT: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      MNE: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      MCO: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      NLD: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      PRT: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      SVK: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      VIR: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      MCO: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      FRA: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
+      SWE: { fillKey: "authorHasTraveledTo", fillColor: "#fa0fa0"},
     },
     geographyConfig: {
             //borderColor: '#DEDEDE',
@@ -195,10 +195,10 @@
                     '</div>'].join('')};
             }
         },
-      done: function(datamap, geo, data) {
+      done: function(datamap) {
 
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-              alert(geo.properties.name);
+              alert(geography.properties.name);
           }); }
     });
 
