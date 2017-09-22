@@ -175,10 +175,10 @@
             //borderColor: '#DEDEDE',
             //highlightBorderWidth: 2,
             // don't change color on mouse hover
-            highlightFillColor: function(geo, data) {
+            /*highlightFillColor: function(geo, data) {
                 if (!data) { '#ABDDA4'; }
                 return '#fa0fa0';
-            },
+            },*/
             // only change border
 
             highlightBorderColor: '#c9c9c9',
@@ -186,18 +186,22 @@
             // show desired information in tooltip
             popupTemplate: function(geo, data) {
                 // don't show tooltip if country don't present in dataset
-                if (!data) { return ; }
+                if (!data) { 
+                  highlightFillColor: "#ABDDA4";
+                  return ; }
                 // tooltip content
-                return ['<div class="hoverinfo">',
+                else{
+                  highlightFillColor: '#fa0fa0';
+                  return ['<div class="hoverinfo">',
                     '<strong>', geo.properties.name, '</strong>',
-                    '</div>'].join('');
+                    '</div>'].join('')};
             }
         },
       done: function(datamap, geo, data) {
-          if (!data) { return ; }
+          if (data) { 
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geo.properties.name);
-          }); }
+          }}); }
     });
 
     var colors = d3.scale.category10();
