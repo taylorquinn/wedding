@@ -179,6 +179,7 @@
                 return geo['fillColor'] || '#b5c6e0';
             },*/
             // only change border
+            highlightFillColor: none,
             highlightBorderColor: '#c9c9c9',
             borderWidth: 1,
             // show desired information in tooltip
@@ -192,6 +193,7 @@
             }
         },
       done: function(datamap) {
+          if (!data) { return ; }
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }
