@@ -168,16 +168,19 @@
       SVK: { fillKey: "authorHasTraveledTo" },
       VIR: { fillKey: "authorHasTraveledTo" },
       MCO: { fillKey: "authorHasTraveledTo" },
+      FRA: { fillKey: "authorHasTraveledTo" },
+      SWE: { fillKey: "authorHasTraveledTo" },
     },
     geographyConfig: {
             //borderColor: '#DEDEDE',
             //highlightBorderWidth: 2,
             // don't change color on mouse hover
-            highlightFillColor: function(geo) {
+            /*highlightFillColor: function(geo) {
                 return geo['fillColor'] || '#b5c6e0';
-            },
+            },*/
             // only change border
-            //highlightBorderColor: '#B7B7B7',
+            highlightBorderColor: '#c9c9c9',
+            borderWidth: 1,
             // show desired information in tooltip
             popupTemplate: function(geo, data) {
                 // don't show tooltip if country don't present in dataset
