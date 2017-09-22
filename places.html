@@ -122,7 +122,7 @@
         },
        
       done: function(datamap, geo) {
-        if (geo['article'].equals("true")){
+        if (geo['article']!=null){
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }}
