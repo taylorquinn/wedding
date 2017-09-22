@@ -120,8 +120,9 @@
                     '</div>'].join('')};
             }
         },
-      done: function(datamap, geo) {
         if (geo['article'] == true){
+      done: function(datamap, geo) {
+        
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }}
