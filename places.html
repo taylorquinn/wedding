@@ -122,7 +122,7 @@
         },
        
       done: function(datamap, geo) {
-        if (geo['article']!=null){
+        if (geo['fillKey']=="authorHasTraveledTo"){
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
           }); }}
