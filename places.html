@@ -23,8 +23,7 @@
   <title> Taylor Quinn </title>
 
 <body>
-  
-<body>
+
  <header style="height:unset;"">
    <!-- <div id="header_pic" class="h3">
       <h1 class="hname"> K TAYLOR QUINN</h1>
@@ -54,10 +53,8 @@
 </header>
  
   
-
-<body>
-  <h1>Where in the world have I been:"</h1>
-  <div id="container1" style="border:none"></div>
+  <h1>Where in the world have I been:</h1>
+  <div id="container1" style="border:none width: 700px; margin: 0 auto;"></div>
 
   
 <script>
@@ -151,7 +148,26 @@
       KOR: { fillKey: "authorHasTraveledTo" },
       DEU: { fillKey: "authorHasTraveledTo" },
     }
-  });
+    geographyConfig: {
+            borderColor: '#DEDEDE',
+            highlightBorderWidth: 2,
+            // don't change color on mouse hover
+            highlightFillColor: function(geo) {
+                return geo['fillColor'] || '#F5F5F5';
+            },
+            // only change border
+            highlightBorderColor: '#B7B7B7',
+            // show desired information in tooltip
+            popupTemplate: function(geo, data) {
+                // don't show tooltip if country don't present in dataset
+                if (!data) { return ; }
+                // tooltip content
+                return ['<div class="hoverinfo">',
+                    '<strong>', geo.properties.name, '</strong>','</strong>',
+                    '</div>'].join('');
+            }
+        }
+    });
 
     var colors = d3.scale.category10();
 
