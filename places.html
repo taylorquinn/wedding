@@ -120,11 +120,11 @@
                     '</div>'].join('')};
             }
         },
-      done: function(datamap) {
-
+      done: function(datamap, geo) {
+        if (geo['article'] == true){
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
               alert(geography.properties.name);
-          }); }
+          }); }}
     });
 
     var colors = d3.scale.category10();
