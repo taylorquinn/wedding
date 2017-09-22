@@ -56,12 +56,12 @@
   
 
 <body>
-  <h1>datamaps.js example "Highmaps"</h1>
+  <h1>Where in the world have I been:"</h1>
   <div id="container1"></div>
 
   
 <script>
-    // example data from server
+   /* // example data from server
     var series = [
         ["BLR",75],["BLZ",43],["RUS",50],["RWA",88],["SRB",21],["TLS",43],
         ["REU",21],["TKM",19],["TJK",60],["ROU",4],["TKL",44],["GNB",38],
@@ -135,7 +135,37 @@
                     '</div>'].join('');
             }
         }
-    });
+    });*/
+    var basic_choropleth = new Datamap({
+    element: document.getElementById("container1"),
+    projection: 'mercator',
+    fills: {
+      defaultFill: "#ABDDA4",
+      authorHasTraveledTo: "#fa0fa0"
+    },
+    data: {
+      USA: { fillKey: "authorHasTraveledTo" },
+      JPN: { fillKey: "authorHasTraveledTo" },
+      ITA: { fillKey: "authorHasTraveledTo" },
+      CRI: { fillKey: "authorHasTraveledTo" },
+      KOR: { fillKey: "authorHasTraveledTo" },
+      DEU: { fillKey: "authorHasTraveledTo" },
+    }
+  });
+
+    var colors = d3.scale.category10();
+
+    window.setInterval(function() {
+      basic_choropleth.updateChoropleth({
+        USA: colors(Math.random() * 10),
+        RUS: colors(Math.random() * 100),
+        AUS: { fillKey: 'authorHasTraveledTo' },
+        BRA: colors(Math.random() * 50),
+        CAN: colors(Math.random() * 50),
+        ZAF: colors(Math.random() * 50),
+        IND: colors(Math.random() * 50),
+      });
+    }, 2000);
 </script>
 
 
