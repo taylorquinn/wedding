@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+  <html>
+  
+  <head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script src='masonry.pkgd.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+  </head>
+
+  <title> Taylor Quinn </title>
+
+<body>
+  
+<body>
+ <header style="height:unset;"">
+   <!-- <div id="header_pic" class="h3">
+      <h1 class="hname"> K TAYLOR QUINN</h1>
+    </div>-->
+    <div id="header_nav">
+      <nav>
+        <ul class="navi">
+          <li><a href="index.html" data-hover="Home">Home</a></li>
+          <li class="current"><a href="/places.html" stickydata-hover="Places">Places</a></li>
+          <li><a href="/photos.html" data-hover="Photograph">Photographs</a></li>
+          <li><a href="/html/contact.html" data-hover="Contact">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+
+<div id = "content">
+   <div class="bgimg-0">
+      <div class="caption">
+       <a href="/photographs" style="text-decoration:none">
+        <span class="border">CROATIA</span>
+        </a>
+      </div>
+    </div>
+</div>
+</header>
+ 
+  <h3>Choropleth:</h3>
+  <div class="well well-small options"><span>Options:</span> Mercator projection, custom country fill color data, and <code>updateChoropleth()</code></div>
+  <div class="map" id="basic_choropleth"></div>
+
+<script type="text/javascript">
+var basic_choropleth = new Datamap({
+  element: document.getElementById("basic_choropleth"),
+  projection: 'mercator',
+  fills: {
+    defaultFill: "#ABDDA4",
+    authorHasTraveledTo: "#fa0fa0"
+  },
+  data: {
+    USA: { fillKey: "authorHasTraveledTo" },
+    JPN: { fillKey: "authorHasTraveledTo" },
+    ITA: { fillKey: "authorHasTraveledTo" },
+    CRI: { fillKey: "authorHasTraveledTo" },
+    KOR: { fillKey: "authorHasTraveledTo" },
+    DEU: { fillKey: "authorHasTraveledTo" },
+  }
+});
+
+var colors = d3.scale.category10();
+
+window.setInterval(function() {
+  basic_choropleth.updateChoropleth({
+    USA: colors(Math.random() * 10),
+    RUS: colors(Math.random() * 100),
+    AUS: { fillKey: 'authorHasTraveledTo' },
+    BRA: colors(Math.random() * 50),
+    CAN: colors(Math.random() * 50),
+    ZAF: colors(Math.random() * 50),
+    IND: colors(Math.random() * 50),
+  });
+}, 2000);
+
+</script>
