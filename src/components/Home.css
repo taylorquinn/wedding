@@ -1,0 +1,621 @@
+@font-face {
+  font-family: "Biotif-Regular";
+  src: URL("../assets/fonts/Biotif-Regular.ttf");
+}
+@font-face {
+  font-family: "Biotif-Medium";
+  src: url("../assets/fonts/Biotif-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Romantice";
+  src: url("../assets/fonts/ROMANTICE.otf");
+}
+
+@font-face {
+  font-family: "The Philadelphia Story";
+  src: url("../assets/fonts/ThePhiladelphiaStory.ttf");
+}
+
+@font-face {
+  font-family: "The Star in the Midnight";
+  src: url("../assets/fonts/The-Star-in-the-Midnight.ttf");
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  src: url("../assets/fonts/Cocogoose\ Pro\ Semilight-trial.ttf");
+}
+
+@font-face {
+  font-family: "Cocogoose Light";
+  src: url("../assets/fonts/Cocogoose\ Pro\ Light-trial.ttf");
+}
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("../assets/fonts/coolvetica-rg.otf");
+}
+
+@font-face {
+  font-family: "Biotif-Light";
+  src: url("../assets/fonts/Biotif-Light.ttf");
+}
+
+@font-face {
+  font-family: "Biotif-Regular";
+  src: url("../assets/fonts/Biotif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Biotif-Medium";
+  src: url("../assets/fonts/Biotif-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Biotif-Book";
+  src: url("../assets/fonts/Biotif-Book.ttf");
+}
+@font-face {
+  font-family: "Biotif-Bold";
+  src: url("../assets/fonts/Biotif-Bold.ttf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+@import url("https://use.typekit.net/ovu2xor.css");
+
+.pagewrap {
+  min-height: calc(100vh - 40px);
+  /* margin:20px;*/
+  position: relative;
+  /* background-color: #f4f9fc;*/
+  overflow: hidden;
+  /* transition: background-color 1s cubic-bezier(.165,.84,.44,1);*/
+}
+
+/* .links { font-family: 'Biotif-Medium';}*/
+
+.navigation {
+  position: fixed;
+  z-index: 3;
+  width: calc(100% - 48px);
+  padding: 24px;
+}
+
+.nav-background {
+  height: 68px;
+  position: fixed;
+  background-color: #005f73cc;
+  width: 100%;
+  z-index: 2;
+}
+
+@media all and (min-width: 0px) and (max-width: 440px) {
+  .navigation {
+    position: absolute;
+  }
+  .nav-background {
+    position: absolute;
+  }
+}
+
+.menu {
+  float: right;
+}
+
+.menu p {
+  display: inline;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.menu a {
+  padding: 0px 16px 0px 0px;
+}
+
+a:hover {
+  color: #e56b6f;
+  text-decoration: none;
+}
+
+.header {
+  background-image: url("../assets/images/Localgrapher-2.jpg");
+  height: 720px;
+  max-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  align-items: center; /* center items horizontally, in this case */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.header-pic {
+  z-index: 1;
+  background-image: url("../assets/images/Localgrapher-6.jpg");
+  height: 480px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+.h2 {
+  background-image: url("../assets/images/pier.jpg");
+}
+.h3 {
+  background-image: url("../assets/images/Localgrapher-58.jpg");
+}
+.h4 {
+  background-image: url("../assets/images/Localgrapher-50.jpg");
+}
+.custom-shape-divider-top-1644170982 {
+  margin-top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1644170982 svg {
+  margin-top: -2px;
+  position: relative;
+  display: block;
+  width: calc(143% + 1.3px);
+  height: 87px;
+}
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(143% + 1.3px);
+  height: 87px;
+}
+
+.shape-fill {
+  fill: white;
+}
+.shape-fill2 {
+  fill: #f6f6f6;
+}
+
+.names {
+  font-family: "The Philadelphia Story";
+  text-align: center;
+  white-space: pre-wrap;
+  transition-timing-function: ease;
+  transition-duration: 0.9s;
+  transition-delay: 0.276923s;
+  font-weight: 100;
+  margin-bottom: 0px;
+  font-size: 96px;
+  margin: 0px;
+}
+/* @media screen and (min-width: 0) and (max-width: 1907px) and (orientation: landscape) {
+  .names {
+    font-size: calc((6 - 1) * 1.2vw + 1rem);
+  }
+} */
+
+.where {
+  text-align: center;
+  height: 480px;
+  background-color: white;
+}
+.where-manuel {
+  margin: 0px;
+  font-family: "Biotif-Regular";
+  z-index: 2;
+  position: relative;
+  text-shadow: 2px 2px 9px white;
+}
+
+.where-costa {
+  margin: 0px;
+  font-family: "The Philadelphia Story";
+  font-weight: 100;
+  font-size: 52px;
+  margin-top: -32px;
+  color: #ffc394;
+  z-index: 1;
+}
+.where-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.where-about {
+  padding: 16px;
+}
+
+.manuel {
+  border-radius: 280px;
+  float: right;
+  height: 320px;
+  padding-right: 16px;
+}
+
+.part1 {
+  background-color: #f6f6f6;
+  display: flex;
+}
+
+.letter {
+  background-color: white;
+  flex: 3;
+  margin: 16px;
+  padding: 16px;
+  font-family: "Biotif-Book";
+  font-size: 18px;
+}
+
+.signature {
+  font-family: "The Philadelphia Story";
+}
+
+.countdown {
+  flex: 1;
+  margin: 16px 16px 16px 0px;
+  font-family: "Biotif-Bold";
+  letter-spacing: 2px;
+  background-color: #e9c46a;
+  border: none;
+  padding: 0px;
+}
+
+.countdown:hover {
+  background-color: #f4a261;
+}
+
+.countTitle {
+  padding: 16px;
+  text-align: center;
+  color: white;
+  margin: 0px 0px 8px 0px;
+  border-bottom: 4px solid #fff;
+}
+
+.count {
+  margin: 0px;
+  text-align: center;
+  padding-top: 32px;
+  color: white;
+  font-size: 40px;
+  border-bottom: 4px solid white;
+  padding: 16px 0px;
+  font-family: "Biotif-Regular";
+}
+
+.rsvp {
+  color: white;
+  font-size: 36px;
+  margin: 0px;
+  padding: 16px;
+  font-family: "Biotif-Bold";
+}
+
+.day {
+  background-color: #457b9d;
+  min-width: 240px;
+  width: 240px;
+  padding: 0px 16px 0px 16px;
+  margin: 20px;
+  height: 600px;
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
+  /* align-items: center; */
+  text-align: center;
+  display: inline-block;
+  color: white;
+}
+
+.icon {
+  filter: invert(43%) sepia(76%) saturate(406%) hue-rotate(325deg)
+    brightness(106%) contrast(101%);
+  height: 72px;
+  margin-top: 36px;
+}
+
+.date {
+  font-size: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "freight-sans-pro";
+  font-weight: 500;
+}
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.schedule-date {
+  color: white;
+  font-family: "Romantice";
+  margin-bottom: 0px;
+  z-index: 1;
+  background-color: #f4a261;
+  position: relative;
+  width: 200px;
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 203px;
+  padding-top: 16px;
+}
+
+.schedule-pic {
+  z-index: 1;
+  margin-left: -16px;
+  position: absolute;
+  height: 242px;
+  width: 273px;
+  background-color: yellow;
+  background-attachment: fit;
+  background-size: cover;
+  border-radius: 50% 50% 0% 0%;
+  align-items: center;
+}
+
+.s0 {
+  background-image: url("../assets/images/vista1.jpeg");
+}
+.s1 {
+  background-image: url("../assets/images/boat-nt.jpg");
+}
+
+.s2 {
+  background-image: url("../assets/images/kiss.jpg");
+}
+
+.s3 {
+  background-image: url("../assets/images/beach-nt.jpg");
+}
+.s4 {
+  background-image: url("../assets/images/vista2.jpeg");
+}
+.s5 {
+  background-image: url("../assets/images/back-nt.jpg");
+}
+.s6 {
+  background-image: url("../assets/images/Localgrapher-44.jpg");
+}
+.s7 {
+  background-image: url("../assets/images/plane.jpg");
+}
+
+.event-time {
+  font-family: "freight-sans-pro";
+  font-weight: 600;
+  margin: 0px;
+  font-size: 18px;
+}
+
+.event-title {
+  font-family: "The Philadelphia Story";
+  font-weight: 500;
+  font-style: normal;
+  color: #e9c46a;
+  font-size: 36px;
+  margin: 16px 0px 0px 0px;
+}
+
+.event-location {
+  font-size: 18px;
+  margin: 0px;
+  font-style: italic;
+  font-family: "freight-sans-pro";
+  font-weight: 500;
+}
+
+.event-text {
+  margin-top: 0px;
+}
+.title {
+  margin: 0px 0px 0px 0px;
+  color: #e76f51;
+  font-family: "The Philadelphia Story";
+  font-size: 60px;
+  padding: 24px;
+  font-weight: 100;
+}
+
+.line {
+  border-left: 3px solid #e76f51;
+  height: 96px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.map {
+  border: 0px;
+  width: calc(100% - 48px);
+  max-width: 960px;
+  margin-top: 120px;
+}
+
+.transport {
+  margin: 36px;
+  flex: 1px;
+  min-width: 200px;
+}
+.transport-container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.content {
+  display: flex;
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f6f6f6;
+}
+
+.letter2 {
+  flex: 1;
+  background: white;
+  font-family: "Biotif-Book";
+  font-size: 18px;
+  height: fit-content;
+  margin: 0px 16px 16px 16px;
+  padding: 16px 16px;
+}
+
+.pictures-background {
+  padding: 0px;
+  margin: 48px 0px;
+  top: 0px;
+  height: calc(100% - 96px);
+  position: absolute;
+  background: #e9c36a;
+  width: calc(100% - 32px);
+}
+.pictures {
+  height: fit-content;
+  width: 360px;
+  margin: auto;
+  padding: 16px 16px;
+  max-width: calc(100% - 32px);
+  position: relative;
+}
+.pictures-1 {
+  border-radius: 50% 50% 0% 0%;
+  width: 360px;
+  position: relative;
+  padding: 0px 16px;
+  max-width: calc(100% - 32px);
+}
+.pictures-2 {
+  max-width: calc(100% - 32px);
+  position: relative;
+  width: 360px;
+  padding: 0px 16px;
+}
+.pictures-3 {
+  max-width: calc(100% - 32px);
+  border-radius: 0% 0% 50% 50%;
+  width: 360px;
+  position: relative;
+  padding: 0px 16px;
+}
+.video {
+  width: 100%;
+  height: calc(0.5 * 100vw);
+}
+
+.costs {
+  text-align: left;
+  display: inline;
+  font-size: 18px;
+}
+
+.cost {
+  text-align: left;
+  font-size: 18px;
+}
+.hotel {
+  margin: 18px;
+  flex: 1;
+}
+
+.hotel img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+}
+.rsvp-form {
+  border: 8px solid #457b9d;
+  border-radius: 8px;
+  width: 520px;
+  margin: auto;
+  padding: 16px;
+}
+
+.rsvp-input {
+  padding: 8px;
+  margin: 8px;
+}
+
+/* LOG IN */
+.login {
+  background-image: url("../assets/images/beach-top.jpeg");
+  background-color: rgb(200 100 0 / 18%);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center; /* center items horizontally, in this case */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.button-74 {
+  font-family: "Biotif-Regular";
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 18px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.username {
+  width: 240px;
+  font-size: 18px;
+  display: block;
+  margin: 16px;
+  padding: 12px;
+  border-radius: 18px;
+  font-family: "Biotif-Regular";
+}
+.username::placeholder {
+  color: grey;
+  font-style: italic;
+}
