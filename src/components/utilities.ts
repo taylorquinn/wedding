@@ -53,7 +53,7 @@ export const house: Set<string> = new Set<string>([
   "cara bohmann",
   "tj holt",
 ]);
-export const guest: Set<string> = new Set<string>(["rene"]);
+export const guest: Set<string> = new Set<string>(["rene miller"]);
 
 export const getGuestInfo = (guestName: string): guestInfo => {
   switch (guestName) {
@@ -77,7 +77,7 @@ export const getGuestInfo = (guestName: string): guestInfo => {
       };
     case "courtney quinn":
     case "jo dougherty":
-    case "erin kocis" && "seth goebel":
+    case "erin kocis" || "seth goebel":
       return {
         guest: "Erin",
         partner: "Seth",
@@ -101,7 +101,7 @@ export const getGuestInfo = (guestName: string): guestInfo => {
         guest: "Frances",
         partner: "Will",
       };
-    case "rene":
+    case "rene miller":
       return {
         guest: "Aunt Rene",
       };
