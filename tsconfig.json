@@ -23,5 +23,5 @@
   },
   "include": [
     "src", "assets", "components"
-, "index.tsx"  ]
+, "src/index.tsx"  ]
 }
