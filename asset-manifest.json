@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wedding/static/css/main.30caaa6f.css",
-    "main.js": "/wedding/static/js/main.74b3dc4e.js",
+    "main.js": "/wedding/static/js/main.db0acdca.js",
     "static/media/Localgrapher-2.jpg": "/wedding/static/media/Localgrapher-2.ab894f819281941811ba.jpg",
     "static/media/Localgrapher-6.jpg": "/wedding/static/media/Localgrapher-6.3e1dcf3d7f22f8d534de.jpg",
     "static/media/Localgrapher-44.jpg": "/wedding/static/media/Localgrapher-44.5e04eab330a4f4ea969d.jpg",
@@ -38,10 +38,10 @@
     "static/media/ROMANTICE.otf": "/wedding/static/media/ROMANTICE.af18bf33179c622ceb30.otf",
     "index.html": "/wedding/index.html",
     "main.30caaa6f.css.map": "/wedding/static/css/main.30caaa6f.css.map",
-    "main.74b3dc4e.js.map": "/wedding/static/js/main.74b3dc4e.js.map"
+    "main.db0acdca.js.map": "/wedding/static/js/main.db0acdca.js.map"
   },
   "entrypoints": [
     "static/css/main.30caaa6f.css",
-    "static/js/main.74b3dc4e.js"
+    "static/js/main.db0acdca.js"
   ]
 }
