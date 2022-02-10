@@ -28,7 +28,7 @@ ReactDOM.render(
 
       <div className="main" style={{ width: "100%", top: "0px", left: "0px" }}>
         <Routes>
-          <Route path="/wedding/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route
             path="/wedding"
             element={
