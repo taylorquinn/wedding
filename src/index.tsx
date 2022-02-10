@@ -28,7 +28,7 @@ ReactDOM.render(
 
       <div className="main" style={{ width: "100%", top: "0px", left: "0px" }}>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/wedding/login" element={<Login />} />
           <Route
             path="/wedding"
             element={
@@ -37,14 +37,14 @@ ReactDOM.render(
               </RequireAuth>
             }
           />
-          <Route
-            path="/about"
+          {/* <Route
+            path="/wedding/about"
             element={
               <RequireAuth>
                 <About />
               </RequireAuth>
             }
-          />
+          /> */}
         </Routes>
       </div>
     </AuthProvider>

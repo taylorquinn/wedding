@@ -11,7 +11,7 @@ export const Navigation = (): JSX.Element => {
         <>
           <div className="nav-background"></div>
           <div className="navigation">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/wedding/">
               t♥️n
             </NavLink>
 
