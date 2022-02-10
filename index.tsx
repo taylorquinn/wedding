@@ -19,7 +19,7 @@ import {
   // fakeAuthProvider,
   RequireAuth,
   AuthProvider,
-} from "./components";
+} from "./src/components";
 
 ReactDOM.render(
   <Router>
