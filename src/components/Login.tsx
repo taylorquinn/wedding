@@ -35,7 +35,7 @@ export const Login = (): JSX.Element => {
       // won't end up back on the login page, which is also really nice for the
       // user experience.
       if (success) {
-        navigate(from, { replace: true });
+        //    navigate(from, { replace: true });
       } else {
         setSigninFailure(true);
       }
