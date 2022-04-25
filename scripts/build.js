@@ -27,6 +27,8 @@ const printHostingInstructions = require("react-dev-utils/printHostingInstructio
 const FileSizeReporter = require("react-dev-utils/FileSizeReporter");
 const printBuildError = require("react-dev-utils/printBuildError");
 
+var ghpages = require("gh-pages");
+
 const measureFileSizesBeforeBuild =
   FileSizeReporter.measureFileSizesBeforeBuild;
 const printFileSizesAfterBuild = FileSizeReporter.printFileSizesAfterBuild;
@@ -64,6 +66,10 @@ checkBrowsers(paths.appPath, isInteractive)
     fs.emptyDirSync(paths.appBuild);
     // Merge with the public folder
     copyPublicFolder();
+
+    fs.writeFile("build/CNAME", "taylorandnick.us", function (err) {});
+    // ghpages.publish("dist", function (err) {});
+
     // Start the webpack build
     return build(previousFileSizes);
   })
