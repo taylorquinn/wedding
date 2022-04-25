@@ -6,26 +6,26 @@ import { useAuth } from "./auth";
 import "./Home.css";
 
 export const Login = (): JSX.Element => {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   // interface stateType {
   //   state: { from: { pathname: string } };
   // }
   // let location = useLocation() as stateType;
-  let auth = useAuth();
+  // let auth = useAuth();
   // let from = location.state?.from?.pathname || "/";
-  let from = window.location.hash || "/";
-  console.log(from);
+  // let from = window.location.hash || "/";
+  // console.log(from);
 
-  let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
+  // let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     console.log("HANDLE SUBMIT");
-    let formData = new FormData(event.currentTarget);
-    let username = formData.get("username") as string;
-    global.console.log(username);
+    // let formData = new FormData(event.currentTarget);
+    // let username = formData.get("username") as string;
+    // global.console.log(username);
     // console.log(username);
-    console.log(from);
+    //   console.log(from);
 
     // auth.signin(username, (success: boolean) => {
     //   // Send them back to the page they tried to visit when they were
@@ -69,12 +69,12 @@ export const Login = (): JSX.Element => {
         </form>
       </div>
 
-      {signinFailure && (
+      {/* {signinFailure && (
         <p>
           Sign in failed. Please try again! If there seems to be an error,
           please contact Taylor or Nick
         </p>
-      )}
+      )} */}
     </div>
   );
 };
