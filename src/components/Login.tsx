@@ -18,10 +18,11 @@ export const Login = (): JSX.Element => {
 
   // let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
     console.log("HANDLE SUBMIT");
+    return false;
     // let formData = new FormData(event.currentTarget);
     // let username = formData.get("username") as string;
     // global.console.log(username);
@@ -41,7 +42,7 @@ export const Login = (): JSX.Element => {
     //     setSigninFailure(true);
     //   }
     // });
-  }
+  };
 
   return (
     <div className="login">
