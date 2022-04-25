@@ -21,6 +21,7 @@ export const Login = (): JSX.Element => {
 
     let formData = new FormData(event.currentTarget);
     let username = formData.get("username") as string;
+    global.console.log(username);
 
     auth.signin(username, (success: boolean) => {
       // Send them back to the page they tried to visit when they were
