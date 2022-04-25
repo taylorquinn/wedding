@@ -8,7 +8,7 @@ import hotel from "../assets/images/hotel1.jpg";
 import hostel from "../assets/images/hostel.jpeg";
 import airbnb from "../assets/images/airbnb.jpg";
 
-import { getDaysRemaining, getGuestInfo, guestInfo } from "./utilities";
+import { getDaysRemaining, getGuestInfo } from "./utilities";
 
 import { useAuth } from "./auth";
 import "./Home.css";
@@ -17,7 +17,7 @@ import { Rsvp } from "./rsvp";
 export const Home = (): JSX.Element => {
   let auth = useAuth();
 
-  const guestInfo = getGuestInfo(auth.user!.username.toLowerCase());
+  //  const guestInfo = getGuestInfo(auth.guest!.name.toLowerCase());
   const daysRemaining = getDaysRemaining();
 
   return (
@@ -30,15 +30,12 @@ export const Home = (): JSX.Element => {
       <div className="part1">
         <div className="letter">
           <p>
-            Hi {guestInfo.guest}
-            {guestInfo.partner && " and " + guestInfo.partner}!
+            Hi {auth.guest?.name}
+            {auth.guest?.partner && " and " + auth.guest?.partner}!
           </p>
           <p>
-            Welcome {auth.user?.isHouse && "to the house"} Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            Welcome{auth.guest?.room && " to the house"}!! We are so excited to
+            have you join us for this special occasion.
           </p>
           <p>With love,</p>
           <p className="signature">Taylor + Nick</p>
@@ -49,22 +46,6 @@ export const Home = (): JSX.Element => {
           <h1 className="rsvp">RSVP</h1>
         </button>
       </div>
-      {/* <div id="where" className="where">
-        <h1 className="title">The Destination</h1>
-        <div className="where-info">
-          <div className="where-about">
-            <h1 className="where-manuel">Manuel Antonio</h1>
-            <h1 className="where-costa">Costa Rica</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequa
-            </p>
-          </div>
-          <img src={manuel} className="manuel"></img>
-        </div>
-      </div> */}
       <div className="header-pic">
         <div className="custom-shape-divider-top-1644170982">
           <svg
@@ -104,7 +85,7 @@ export const Home = (): JSX.Element => {
           <h1 className="date">Saturday</h1>
         </div> */}
         <div className="schedule">
-          {auth.user?.isHouse && (
+          {auth.guest?.room && (
             <div id="Saturday" className="day">
               <div className="schedule-pic s0"></div>
               <h1 className="schedule-date">Saturday</h1>
@@ -173,7 +154,7 @@ export const Home = (): JSX.Element => {
               super casual picnic!
             </p>
           </div>
-          {auth.user?.isHouse && (
+          {auth.guest?.room && (
             <>
               <div id="Wednesday" className="day">
                 <div className="schedule-pic s4"></div>
@@ -327,7 +308,7 @@ export const Home = (): JSX.Element => {
           </svg>
         </div>
       </div>
-      {guestInfo.room ? (
+      {auth.guest?.room ? (
         <div
           id="accomodations"
           style={{ textAlign: "center", backgroundColor: "#f6f6f6" }}
@@ -336,8 +317,8 @@ export const Home = (): JSX.Element => {
           <div className="note">
             <div className="letter2">
               <h2>
-                {guestInfo.guest}
-                {guestInfo.partner && " and " + guestInfo.partner}!
+                {auth.guest?.name}
+                {auth.guest?.partner && " and " + auth.guest?.partner}!
               </h2>
               <p style={{ textAlign: "left" }}>
                 When we started planning this wedding, we realized we could not
@@ -363,11 +344,11 @@ export const Home = (): JSX.Element => {
                 <br />
                 <br />
                 We have reserved a bed for you in{" "}
-                <b>{guestInfo.room.roomName}</b>
+                <b>{auth.guest?.room.roomName}</b>
                 <i> (see middle picture) </i>
-                {guestInfo.room.roommate ? (
+                {auth.guest?.room.roommate ? (
                   <>
-                    with <b>{guestInfo.room.roommate}.</b>
+                    with <b>{auth.guest?.room.roommate}.</b>
                   </>
                 ) : (
                   <>.</>
@@ -407,16 +388,16 @@ export const Home = (): JSX.Element => {
             <div className="pictures">
               <div className="pictures-background"></div>
               <img className="pictures-1" src={vista1} />
-              <img className="pictures-2" src={guestInfo.room.roomImage} />
+              <img className="pictures-2" src={auth.guest.room.roomImage} />
               <img className="pictures-3" src={vista2} />
             </div>
           </div>
           <iframe
             className="video"
-            src="https://www.youtube.com/embed/vQ_2BPYlrcQ?autoplay=1&mute=1&loop=1"
+            src="https://www.youtube.com/embed/vQ_2BPYlrcQ?autoplay=0&mute=1&loop=1"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
@@ -512,7 +493,7 @@ export const Home = (): JSX.Element => {
           </svg>
         </div>
       </div>
-      <Rsvp guestInfo={guestInfo} />
+      <Rsvp guestInfo={auth.guest!} />
     </div>
   );
 };

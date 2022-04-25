@@ -1,6 +1,6 @@
-import { guestInfo } from "./utilities";
+import { Guest } from "./utilities";
 
-type IRsvpProps = { guestInfo: guestInfo };
+type IRsvpProps = { guestInfo: Guest };
 type RequestObject = { name: string; food: string };
 
 export const Rsvp = (props: IRsvpProps): JSX.Element => {
@@ -14,7 +14,7 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
     let foodRsvp = formData.get("foodRsvp") as string;
 
     const requestObject: RequestObject = {
-      name: props.guestInfo.guest,
+      name: props.guestInfo.name,
       food: guestRsvp,
     };
     // makeInsertRequest(requestObject);
@@ -27,7 +27,7 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
       <form className="rsvp-form" onSubmit={submitRSVP}>
         <h2>Who will be joining us? </h2>
         <label>
-          {props.guestInfo.guest}
+          {props.guestInfo.name}
           <input name="guestRsvp" type="checkbox" className="rsvp-input" />
         </label>
         {props.guestInfo.partner && (

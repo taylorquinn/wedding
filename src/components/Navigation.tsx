@@ -7,13 +7,11 @@ export const Navigation = (): JSX.Element => {
 
   return (
     <>
-      {auth.user && (
+      {auth.guest && (
         <>
           <div className="nav-background"></div>
           <div className="navigation">
-            <NavLink className="nav-link" to="/wedding/">
-              t♥️n
-            </NavLink>
+            {/* <a href="#header">t♥️n</a> */}
 
             <div className="menu">
               <a href="#schedule">The Schedule</a>

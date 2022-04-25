@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate, useLocation, Navigate } from "react-router-dom";
-import { guest, house } from "./utilities";
+import { getGuestInfo, Guest } from "./utilities";
+// import { guest, house } from "./utilities";
 
-type User = { username: string; isHouse: boolean };
+// type User = { username: string; isHouse: boolean };
 interface AuthContextType {
-  user: User | null;
+  guest: Guest | null;
   signin: (user: string, callback: (success: boolean) => void) => void;
   signout: (callback: VoidFunction) => void;
 }
@@ -12,27 +13,25 @@ interface AuthContextType {
 let AuthContext = React.createContext<AuthContextType>(null!);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  let [user, setUser] = React.useState<User | null>(null);
+  let [guest, setGuest] = React.useState<Guest | null>(null);
 
   let signin = (username: string, callback: (success: boolean) => void) => {
-    if (guest.has(username.toLowerCase())) {
-      setUser({ username, isHouse: false });
-      callback(true);
-    } else if (house.has(username.toLowerCase())) {
-      setUser({ username, isHouse: true });
+    let guestInfo = getGuestInfo(username.toLowerCase());
+    if (guestInfo) {
+      setGuest(guestInfo);
       callback(true);
     } else {
-      setUser(null);
+      setGuest(null);
       callback(false);
     }
   };
 
   let signout = (callback: VoidFunction) => {
-    setUser(null);
+    setGuest(null);
     callback();
   };
 
-  let value = { user, signin, signout };
+  let value = { guest, signin, signout };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
@@ -67,7 +66,7 @@ export function RequireAuth({ children }: { children: JSX.Element }) {
   let auth = useAuth();
   let location = useLocation();
 
-  if (!auth.user) {
+  if (!auth.guest) {
     // Redirect them to the /login page, but save the current location they were
     // trying to go to when they were redirected. This allows us to send them
     // along to that page after they login, which is a nicer user experience

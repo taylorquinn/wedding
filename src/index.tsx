@@ -30,7 +30,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
-            path="/wedding"
+            path=""
             element={
               <RequireAuth>
                 <Home />
