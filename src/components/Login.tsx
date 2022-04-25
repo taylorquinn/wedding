@@ -7,6 +7,7 @@ import "./Home.css";
 
 export const Login = (): JSX.Element => {
   const input: React.Ref<HTMLInputElement> = React.useRef(null);
+  const div: React.Ref<HTMLDivElement> = React.useRef(null);
 
   let navigate = useNavigate();
   // interface stateType {
@@ -28,6 +29,7 @@ export const Login = (): JSX.Element => {
     //   event.preventDefault();
     //  event.stopPropagation();
     console.log("HANDLE SUBMIT");
+    div.current!.style.color = "blue";
 
     // let formData = new FormData(event.currentTarget);
     let username = input.current?.value;
@@ -66,6 +68,19 @@ export const Login = (): JSX.Element => {
       >
         welcome
       </h1>
+      <div
+        ref={div}
+        style={{
+          position: "absolute",
+          height: "90px",
+          width: "90px",
+          top: "0px",
+          left: "0px",
+          display: "block",
+          color: "orange",
+          backgroundColor: "pink",
+        }}
+      ></div>
       <div style={{ textAlign: "center" }}>
         {/*  <form onSubmit={handleSubmit}>*/}
         <input
