@@ -10,9 +10,10 @@ export const Login = (): JSX.Element => {
   interface stateType {
     state: { from: { pathname: string } };
   }
-  let location = useLocation() as stateType;
+  // let location = useLocation() as stateType;
   let auth = useAuth();
-  let from = location.state?.from?.pathname || "/";
+  // let from = location.state?.from?.pathname || "/";
+  let from = window.location.hash || "/";
   console.log(from);
 
   let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
