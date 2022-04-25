@@ -20,6 +20,7 @@ export const Login = (): JSX.Element => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    event.stopPropagation();
     console.log("HANDLE SUBMIT");
     // let formData = new FormData(event.currentTarget);
     // let username = formData.get("username") as string;
