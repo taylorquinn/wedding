@@ -65,7 +65,7 @@ export const Login = (): JSX.Element => {
             className="username"
             placeholder="Please enter your full name"
           />
-          <button className="button-74" type="submit">
+          <button className="button-74" type="button">
             Submit
           </button>
         </form>
