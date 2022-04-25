@@ -18,6 +18,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   let signin = (username: string, callback: (success: boolean) => void) => {
     let guestInfo = getGuestInfo(username.toLowerCase());
     global.console.log(guestInfo);
+    console.log(guestInfo);
     if (guestInfo) {
       setGuest(guestInfo);
       callback(true);
