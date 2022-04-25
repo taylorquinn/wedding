@@ -58,17 +58,16 @@ export const Login = (): JSX.Element => {
         welcome
       </h1>
       <div style={{ textAlign: "center" }}>
-        <form onSubmit={handleSubmit}>
-          <input
-            name="username"
-            type="text"
-            className="username"
-            placeholder="Please enter your full name"
-          />
-          <button className="button-74" type="button">
-            Submit
-          </button>
-        </form>
+        {/*  <form onSubmit={handleSubmit}>*/}
+        <input
+          name="username"
+          type="text"
+          className="username"
+          placeholder="Please enter your full name"
+        />
+        <button className="button-74" type="button">
+          Submit!
+        </button>
       </div>
 
       {/* {signinFailure && (
