@@ -8,17 +8,17 @@ import "./Home.css";
 export const Login = (): JSX.Element => {
   const input: React.Ref<HTMLInputElement> = React.useRef(null);
 
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
   // interface stateType {
   //   state: { from: { pathname: string } };
   // }
   // let location = useLocation() as stateType;
-  // let auth = useAuth();
+  let auth = useAuth();
   // let from = location.state?.from?.pathname || "/";
-  // let from = window.location.hash || "/";
-  // console.log(from);
+  let from = window.location.hash || "/";
+  console.log(from);
 
-  // let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
+  let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
   const handleSubmit = (
     event:
@@ -34,20 +34,23 @@ export const Login = (): JSX.Element => {
     // global.console.log(username);
     console.log(username);
     //   console.log(from);
+    if (username === undefined) {
+      setSigninFailure(true);
+    }
 
-    // auth.signin(username, (success: boolean) => {
-    //   // Send them back to the page they tried to visit when they were
-    //   // redirected to the login page. Use { replace: true } so we don't create
-    //   // another entry in the history stack for the login page.  This means that
-    //   // when they get to the protected page and click the back button, they
-    //   // won't end up back on the login page, which is also really nice for the
-    //   // user experience.
-    //   if (success) {
-    //     //    navigate(from, { replace: true });
-    //   } else {
-    //     setSigninFailure(true);
-    //   }
-    // });
+    auth.signin(username!, (success: boolean) => {
+      //   // Send them back to the page they tried to visit when they were
+      //   // redirected to the login page. Use { replace: true } so we don't create
+      //   // another entry in the history stack for the login page.  This means that
+      //   // when they get to the protected page and click the back button, they
+      //   // won't end up back on the login page, which is also really nice for the
+      //   // user experience.
+      if (success) {
+        navigate(from, { replace: true });
+      } else {
+        setSigninFailure(true);
+      }
+    });
   };
 
   return (
@@ -82,12 +85,12 @@ export const Login = (): JSX.Element => {
         </button>
       </div>
 
-      {/* {signinFailure && (
+      {signinFailure && (
         <p>
           Sign in failed. Please try again! If there seems to be an error,
           please contact Taylor or Nick
         </p>
-      )} */}
+      )}
     </div>
   );
 };
