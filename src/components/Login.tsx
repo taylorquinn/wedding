@@ -6,9 +6,6 @@ import { useAuth } from "./auth";
 import "./Home.css";
 
 export const Login = (): JSX.Element => {
-  const input: React.Ref<HTMLInputElement> = React.useRef(null);
-  const div: React.Ref<HTMLDivElement> = React.useRef(null);
-
   let navigate = useNavigate();
   // interface stateType {
   //   state: { from: { pathname: string } };
@@ -21,20 +18,14 @@ export const Login = (): JSX.Element => {
 
   let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
-  const handleSubmit = (
-    event:
-      | React.MouseEvent<HTMLButtonElement, MouseEvent>
-      | React.KeyboardEvent<HTMLInputElement>
-  ) => {
-    //   event.preventDefault();
-    //  event.stopPropagation();
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     console.log("HANDLE SUBMIT");
-    div.current!.style.backgroundColor = "blue";
-
-    // let formData = new FormData(event.currentTarget);
-    let username = input.current?.value;
-    // global.console.log(username);
-    console.log(username);
+    let formData = new FormData(event.currentTarget);
+    let username = formData.get("username") as string;
+    global.console.log(username);
+    // console.log(username);
+    console.log(from);
     //   console.log(from);
     if (username === undefined) {
       setSigninFailure(true);
@@ -68,36 +59,18 @@ export const Login = (): JSX.Element => {
       >
         welcome
       </h1>
-      <div
-        ref={div}
-        style={{
-          position: "absolute",
-          height: "90px",
-          width: "90px",
-          top: "0px",
-          left: "0px",
-          display: "block",
-          color: "orange",
-          backgroundColor: "pink",
-        }}
-      ></div>
       <div style={{ textAlign: "center" }}>
-        {/*  <form onSubmit={handleSubmit}>*/}
-        <input
-          name="username"
-          type="text"
-          className="username"
-          ref={input}
-          placeholder="Please enter your full name"
-          onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
-            if (event.code === "Enter") {
-              handleSubmit(event);
-            }
-          }}
-        />
-        <button className="button-74" type="button" onClick={handleSubmit}>
-          Submit!
-        </button>
+        <form onSubmit={handleSubmit}>
+          <input
+            name="username"
+            type="text"
+            className="username"
+            placeholder="Please enter your full name"
+          />
+          <button className="button-74" type="submit">
+            Submit!
+          </button>
+        </form>
       </div>
 
       {signinFailure && (
