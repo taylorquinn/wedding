@@ -6,6 +6,8 @@ import { useAuth } from "./auth";
 import "./Home.css";
 
 export const Login = (): JSX.Element => {
+  const input: React.Ref<HTMLInputElement> = React.useRef(null);
+
   // let navigate = useNavigate();
   // interface stateType {
   //   state: { from: { pathname: string } };
@@ -18,15 +20,19 @@ export const Login = (): JSX.Element => {
 
   // let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
+  const handleSubmit = (
+    event:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLInputElement>
+  ) => {
+    //   event.preventDefault();
+    //  event.stopPropagation();
     console.log("HANDLE SUBMIT");
-    return false;
+
     // let formData = new FormData(event.currentTarget);
-    // let username = formData.get("username") as string;
+    let username = input.current?.value;
     // global.console.log(username);
-    // console.log(username);
+    console.log(username);
     //   console.log(from);
 
     // auth.signin(username, (success: boolean) => {
@@ -63,9 +69,15 @@ export const Login = (): JSX.Element => {
           name="username"
           type="text"
           className="username"
+          ref={input}
           placeholder="Please enter your full name"
+          onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
+            if (event.code === "Enter") {
+              handleSubmit(event);
+            }
+          }}
         />
-        <button className="button-74" type="button">
+        <button className="button-74" type="button" onClick={handleSubmit}>
           Submit!
         </button>
       </div>
