@@ -29,7 +29,7 @@ export const Login = (): JSX.Element => {
     //   event.preventDefault();
     //  event.stopPropagation();
     console.log("HANDLE SUBMIT");
-    div.current!.style.color = "blue";
+    div.current!.style.backgroundColor = "blue";
 
     // let formData = new FormData(event.currentTarget);
     let username = input.current?.value;
