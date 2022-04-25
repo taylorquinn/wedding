@@ -13,6 +13,7 @@ export const Login = (): JSX.Element => {
   let location = useLocation() as stateType;
   let auth = useAuth();
   let from = location.state?.from?.pathname || "/";
+  console.log(from);
 
   let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
