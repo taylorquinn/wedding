@@ -364,7 +364,7 @@ a:hover {
   margin-left: -16px;
   position: absolute;
   height: 242px;
-  width: 273px;
+  width: 272px;
   background-color: yellow;
   background-attachment: fit;
   background-size: cover;
@@ -544,9 +544,10 @@ a:hover {
 .rsvp-form {
   border: 8px solid #457b9d;
   border-radius: 8px;
-  width: 520px;
   margin: auto;
-  padding: 16px;
+  /* padding: 16px; */
+  width: 520px;
+  max-width: calc(100% - 16px);
 }
 
 .rsvp-input {
