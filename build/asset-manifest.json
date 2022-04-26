@@ -1,7 +1,7 @@
 {
   "files": {
     "main.js": "/bundle.js",
-    "main.css": "/static/css/main.1c0b6a48.css",
+    "main.css": "/static/css/main.1c849ac2.css",
     "static/media/Localgrapher-2.jpg": "/static/media/Localgrapher-2.ab894f819281941811ba.jpg",
     "static/media/Localgrapher-6.jpg": "/static/media/Localgrapher-6.3e1dcf3d7f22f8d534de.jpg",
     "static/media/Localgrapher-44.jpg": "/static/media/Localgrapher-44.5e04eab330a4f4ea969d.jpg",
@@ -39,10 +39,10 @@
     "static/media/ROMANTICE.otf": "/static/media/ROMANTICE.af18bf33179c622ceb30.otf",
     "index.html": "/index.html",
     "bundle.js.map": "/bundle.js.map",
-    "main.1c0b6a48.css.map": "/static/css/main.1c0b6a48.css.map"
+    "main.1c849ac2.css.map": "/static/css/main.1c849ac2.css.map"
   },
   "entrypoints": [
     "bundle.js",
-    "static/css/main.1c0b6a48.css"
+    "static/css/main.1c849ac2.css"
   ]
 }
