@@ -136,7 +136,7 @@ a:hover {
   position: relative;
 }
 
-@media only screen and (max-device-width: 1020px) {
+@media only screen and (max-device-width: 1024px) {
   .header {
     background-attachment: scroll;
   }
@@ -152,8 +152,8 @@ a:hover {
   background-attachment: fixed;
 }
 
-@media only screen {
-  .header-pic {
+@media only screen and (max-device-width: 1024px) {
+  .header {
     background-attachment: scroll;
   }
 }
