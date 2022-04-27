@@ -37,14 +37,6 @@ ReactDOM.render(
               </RequireAuth>
             }
           />
-          {/* <Route
-            path="/wedding/about"
-            element={
-              <RequireAuth>
-                <About />
-              </RequireAuth>
-            }
-          /> */}
         </Routes>
       </div>
     </AuthProvider>
