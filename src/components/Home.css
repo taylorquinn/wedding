@@ -120,7 +120,7 @@ a:hover {
 }
 
 .header {
-  background-image: url("../assets/images/Localgrapher-2.jpg");
+  background-image: url("../assets/images/banner-header.jpg");
   height: 720px;
   max-height: 100vh;
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@ a:hover {
   position: relative;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-device-width: 1020px) {
   .header {
     background-attachment: scroll;
   }
@@ -144,7 +144,7 @@ a:hover {
 
 .header-pic {
   z-index: 1;
-  background-image: url("../assets/images/Localgrapher-6.jpg");
+  background-image: url("../assets/images/banner-walk.jpg");
   height: 480px;
   background-position: center;
   background-size: cover;
@@ -152,20 +152,20 @@ a:hover {
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .header-pic {
     background-attachment: scroll;
   }
 }
 
 .h2 {
-  background-image: url("../assets/images/pier.jpg");
+  background-image: url("../assets/images/banner-pier.jpg");
 }
 .h3 {
-  background-image: url("../assets/images/Localgrapher-58.jpg");
+  background-image: url("../assets/images/kiss.jpg");
 }
 .h4 {
-  background-image: url("../assets/images/Localgrapher-50.jpg");
+  background-image: url("../assets/images/banner-rings.jpg");
 }
 .custom-shape-divider-top-1644170982 {
   margin-top: 0;
@@ -387,10 +387,10 @@ a:hover {
 }
 
 .s0 {
-  background-image: url("../assets/images/vista1.jpeg");
+  background-image: url("../assets/images/sched-vista1.jpg");
 }
 .s1 {
-  background-image: url("../assets/images/boat-nt.jpg");
+  background-image: url("../assets/images/sched-boat.jpg");
 }
 
 .s2 {
@@ -398,19 +398,19 @@ a:hover {
 }
 
 .s3 {
-  background-image: url("../assets/images/beach-nt.jpg");
+  background-image: url("../assets/images/sched-beach.jpg");
 }
 .s4 {
-  background-image: url("../assets/images/vista2.jpeg");
+  background-image: url("../assets/images/sched-vista2.jpg");
 }
 .s5 {
-  background-image: url("../assets/images/back-nt.jpg");
+  background-image: url("../assets/images/sched-back.jpg");
 }
 .s6 {
-  background-image: url("../assets/images/Localgrapher-44.jpg");
+  background-image: url("../assets/images/sched-hug.jpg");
 }
 .s7 {
-  background-image: url("../assets/images/plane.jpg");
+  background-image: url("../assets/images/sched-plane.jpg");
 }
 
 .event-time {
@@ -571,7 +571,7 @@ a:hover {
 
 /* LOG IN */
 .login {
-  background-image: url("../assets/images/beach-top.jpeg");
+  background-image: url("../assets/images/login-beach.jpeg");
   background-color: rgb(200 100 0 / 18%);
   background-blend-mode: multiply;
   min-height: 100vh;

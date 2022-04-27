@@ -2,10 +2,10 @@ import React from "react";
 import plane from "../assets/images/plane.png";
 import van from "../assets/images/van.png";
 import car from "../assets/images/car.png";
-import vista1 from "../assets/images/vista1.jpeg";
-import vista2 from "../assets/images/vista2.jpeg";
+import vista1 from "../assets/images/sched-vista1.jpg";
+import vista2 from "../assets/images/sched-vista2.jpg";
 import hotel from "../assets/images/hotel1.jpg";
-import hostel from "../assets/images/hostel.jpeg";
+import hostel from "../assets/images/hostel.jpg";
 import airbnb from "../assets/images/airbnb.jpg";
 
 import { getDaysRemaining, getGuestInfo } from "./utilities";

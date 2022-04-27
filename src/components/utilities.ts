@@ -1,12 +1,12 @@
 import React from "react";
-import room1 from "../assets/images/room-1.png";
-import room2 from "../assets/images/room-2-rana.png";
-import room3 from "../assets/images/room-3-toucan.png";
-import room4 from "../assets/images/room-4.png";
-import room5 from "../assets/images/room-5-lapa.png";
-import room6 from "../assets/images/room-6-mono.png";
-import apt1 from "../assets/images/apt1.png";
-import apt2 from "../assets/images/apt2.png";
+import room1 from "../assets/images/room-1.jpg";
+import room2 from "../assets/images/room-2-rana.jpg";
+import room3 from "../assets/images/room-3-toucan.jpg";
+import room4 from "../assets/images/room-4.jpg";
+import room5 from "../assets/images/room-5-lapa.jpg";
+import room6 from "../assets/images/room-6-mono.jpg";
+import apt1 from "../assets/images/room-1.jpg";
+import apt2 from "../assets/images/room-2.jpg";
 
 export type Guest = {
   name: string;
