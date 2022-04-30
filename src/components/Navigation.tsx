@@ -21,10 +21,27 @@ export const Navigation = (): JSX.Element => {
               >
                 The Schedule
               </a>
-              <a href="#schedule">The Schedule</a>
-              <a href="#gettingThere">Getting There</a>
-              <a href="#accomodations">Accomodations</a>
-              <a href="#RSVP">RSVP</a>
+              <a
+                onClick={() => {
+                  document.getElementById("gettingThere")!.scrollIntoView();
+                }}
+              >
+                Getting There
+              </a>
+              <a
+                onClick={() => {
+                  document.getElementById("accomodations")!.scrollIntoView();
+                }}
+              >
+                Accomodations
+              </a>
+              <a
+                onClick={() => {
+                  document.getElementById("RSVP")!.scrollIntoView();
+                }}
+              >
+                RSVP
+              </a>
             </div>
           </div>
         </>
