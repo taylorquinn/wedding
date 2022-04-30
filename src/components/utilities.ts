@@ -29,40 +29,6 @@ export const getDaysRemaining = (): number => {
   return Math.trunc(Difference_In_Time / (1000 * 3600 * 24));
 };
 
-// export const house: Set<string> = new Set<string>([
-//   "nick bohmann",
-//   "taylor quinn",
-//   "hugh c quinn",
-//   "beth holloway",
-//   "courtney quinn",
-//   "jo dougherty",
-//   "frances shapiro",
-//   "will deuschle",
-//   "erin kocis",
-//   "seth goebel",
-//   "lisa quinn",
-//   "hugh quinn",
-//   "ishita ganotra",
-//   "kush pandit",
-//   "matt marchiony",
-//   "boston burke",
-//   "john bradford",
-//   "john daguerre-bradford",
-//   "bella ferraro",
-//   "riley lovett",
-//   "brooke gerlach",
-//   "cara bohmann",
-//   "tj holt",
-// ]);
-// export const guest: Set<string> = new Set<string>([
-//   "rene miller",
-//   "carol miller",
-//   "deby lemire",
-//   "mady bucher",
-//   "sahil doshi",
-//   "resa"
-// ]);
-
 export const getGuestInfo = (guestName: string): Guest | null => {
   switch (guestName) {
     case "nick bohmann":

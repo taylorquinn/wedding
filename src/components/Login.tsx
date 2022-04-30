@@ -7,26 +7,17 @@ import "./Home.css";
 
 export const Login = (): JSX.Element => {
   let navigate = useNavigate();
-  // interface stateType {
-  //   state: { from: { pathname: string } };
-  // }
-  // let location = useLocation() as stateType;
+
   let auth = useAuth();
-  // let from = location.state?.from?.pathname || "/";
   let from = "/";
-  console.log(from);
 
   let [signinFailure, setSigninFailure] = React.useState<boolean | null>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("HANDLE SUBMIT");
     let formData = new FormData(event.currentTarget);
     let username = formData.get("username") as string;
-    global.console.log(username);
-    // console.log(username);
-    console.log(from);
-    //   console.log(from);
+
     if (username === undefined) {
       setSigninFailure(true);
     }
