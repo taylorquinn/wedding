@@ -1,7 +1,13 @@
 import { Guest } from "./utilities";
 
 type IRsvpProps = { guestInfo: Guest };
-type RequestObject = { name: string; food: string };
+type RequestObject = {
+  guest: string;
+  guestRsvp: string;
+  partnerRsvp: string;
+  food: string;
+  house: string;
+};
 
 export const Rsvp = (props: IRsvpProps): JSX.Element => {
   const submitRSVP = (event: React.FormEvent<HTMLFormElement>) => {
@@ -11,40 +17,71 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
     let guestRsvp =
       (formData.get("guestRsvp") as string) == "on" ? "yes" : "no";
     let partnerRsvp = formData.get("partnerRsvp") as string;
-    let foodRsvp = formData.get("foodRsvp") as string;
+    let food = formData.get("foodRsvp") as string;
+    let house = (formData.get("foodRsvp") as string) || "---";
 
     const requestObject: RequestObject = {
-      name: props.guestInfo.name,
-      food: guestRsvp,
+      guest: props.guestInfo.name,
+      guestRsvp,
+      partnerRsvp,
+      food,
+      house,
     };
     // makeInsertRequest(requestObject);
     console.log(requestObject);
   };
 
   return (
-    <div id="rsvp" style={{ textAlign: "center" }}>
-      <h1 className="title">rsvp</h1>
+    <div id="rsvp">
+      <h1 className="title" style={{ textAlign: "center" }}>
+        rsvp
+      </h1>
       <form className="rsvp-form" onSubmit={submitRSVP}>
         <h2>Who will be joining us? </h2>
-        <label>
-          {props.guestInfo.name}
-          <input name="guestRsvp" type="checkbox" className="rsvp-input" />
-        </label>
+        <input name="guestRsvp" type="checkbox" className="rsvp-input" />
+        <label>{props.guestInfo.name}</label>
+        <br />
         {props.guestInfo.partner && (
-          <label>
-            {props.guestInfo.partner}
+          <>
             <input name="partnerRsvp" type="checkbox" className="rsvp-input" />
-          </label>
+            <label>{props.guestInfo.partner} </label>
+            <br />
+          </>
         )}
-        <label>
-          Any food requirements?
-          <input
-            name="foodRsvp"
-            type="text"
-            className="rsvp-input"
-            placeholder=""
-          />
-        </label>
+        <h2>Any food restrictions? </h2>
+        <input
+          name="foodRsvp"
+          type="text"
+          className="rsvp-input-box"
+          placeholder=""
+        />
+        <br />
+        {props.guestInfo.room && (
+          <form>
+            <h2>Are you interested in staying in the house?</h2>
+            <input type="radio" id="html" name="fav_language" value="HTML" />
+            <label>Yes!!</label>
+            <br />
+            <input
+              type="radio"
+              id="javascript"
+              name="fav_language"
+              value="JavaScript"
+            />
+            <label>Yes, but not the whole time</label>
+            <br />
+            <input type="radio" id="css" name="fav_language" value="CSS" />
+            <label>Nope</label>
+            <br />
+            <input
+              type="radio"
+              id="javascript"
+              name="fav_language"
+              value="JavaScript"
+            />
+            <label>Not yet sure</label>
+          </form>
+        )}
         <br />
         <button className="button-74" type="submit">
           Submit

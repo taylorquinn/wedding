@@ -40,7 +40,12 @@ export const Home = (): JSX.Element => {
           <p>With love,</p>
           <p className="signature">Taylor + Nick</p>
         </div>
-        <button className="countdown">
+        <button
+          className="countdown"
+          onClick={() => {
+            document.getElementById("rsvp")!.scrollIntoView();
+          }}
+        >
           <h2 className="countTitle">The fun begins in:</h2>
           <h1 className="count">{daysRemaining} days</h1>
           <h1 className="rsvp">RSVP</h1>
@@ -464,7 +469,7 @@ export const Home = (): JSX.Element => {
             </div>
           </div>
         </>
-      )}{" "}
+      )}
       <div className="header-pic h4">
         <div className="custom-shape-divider-top-1644170982">
           <svg

@@ -560,13 +560,23 @@ a:hover {
   border-radius: 8px;
   margin: auto;
   /* padding: 16px; */
-  width: 520px;
-  max-width: calc(100% - 16px);
+  width: 480px;
+  max-width: calc(100% - 32px);
+  padding-left: 16px;
+}
+.rsvp-form h2 {
+  font-size: 16px;
 }
 
 .rsvp-input {
   padding: 8px;
   margin: 8px;
+}
+
+.rsvp-input-box {
+  padding: 8px;
+  margin: 8px;
+  width: calc(100% - 48px);
 }
 
 /* LOG IN */

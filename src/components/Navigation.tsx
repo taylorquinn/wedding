@@ -37,7 +37,7 @@ export const Navigation = (): JSX.Element => {
               </a>
               <a
                 onClick={() => {
-                  document.getElementById("RSVP")!.scrollIntoView();
+                  document.getElementById("rsvp")!.scrollIntoView();
                 }}
               >
                 RSVP

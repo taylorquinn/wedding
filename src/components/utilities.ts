@@ -13,6 +13,7 @@ export type Guest = {
   partner?: string;
   room?: roomInfo;
   announceOnly?: boolean;
+  isFamily?: boolean;
 };
 export type roomInfo = {
   roommate?: string;
@@ -238,11 +239,13 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "rene miller":
       return {
         name: "Aunt Rene",
+        isFamily: true,
       };
     case "carol miller":
       return {
         name: "Grandma",
         partner: "Grandpa",
+        isFamily: true,
       };
     case "mady bucher":
     case "sahil doshi":
@@ -255,17 +258,20 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Aunt Deby",
         partner: "Uncle Dave",
+        isFamily: true,
       };
-    case "anne quinn":
+    case "ann quinn":
       return {
         name: "Grandma",
         partner: "Grandpa",
+        isFamily: true,
       };
     case "resa pearson":
     case "tom pearson":
       return {
         name: "Aunt Resa",
         partner: "Uncle Tom",
+        isFamily: true,
       };
     case "julia dunbar":
       return {
@@ -324,6 +330,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Joerg",
         partner: "Christiane",
+        isFamily: true,
       };
     case "mary anderson":
       return {

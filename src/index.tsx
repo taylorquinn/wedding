@@ -27,7 +27,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
-            path="/"
+            path=""
             element={
               <RequireAuth>
                 <Home />
