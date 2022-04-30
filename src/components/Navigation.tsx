@@ -14,6 +14,13 @@ export const Navigation = (): JSX.Element => {
             {/* <a href="#header">t♥️n</a> */}
 
             <div className="menu">
+              <a
+                onClick={() => {
+                  document.getElementById("schedule")!.scrollIntoView();
+                }}
+              >
+                The Schedule
+              </a>
               <a href="#schedule">The Schedule</a>
               <a href="#gettingThere">Getting There</a>
               <a href="#accomodations">Accomodations</a>
