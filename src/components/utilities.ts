@@ -5,8 +5,8 @@ import room3 from "../assets/images/room-3-toucan.jpg";
 import room4 from "../assets/images/room-4.jpg";
 import room5 from "../assets/images/room-5-lapa.jpg";
 import room6 from "../assets/images/room-6-mono.jpg";
-import apt1 from "../assets/images/room-1.jpg";
-import apt2 from "../assets/images/room-2.jpg";
+import apt1 from "../assets/images/room-7.jpg";
+import apt2 from "../assets/images/room-8.jpg";
 
 export type Guest = {
   name: string;
@@ -29,6 +29,67 @@ export const getDaysRemaining = (): number => {
   return Math.trunc(Difference_In_Time / (1000 * 3600 * 24));
 };
 
+// export const house: Set<string> = new Set<string>([
+//   "nick bohmann",
+//   "taylor quinn",
+//   "hugh c quinn",
+//   "beth holloway",
+//   "courtney quinn",
+//   "jo dougherty",
+//   "frances shapiro",
+//   "will deuschle",
+//   "erin kocis",
+//   "seth goebel",
+//   "dirk bohmann",
+//   "catherine ovitt",
+//   "lisa quinn",
+//   "hugh quinn",
+//   "ishita ganotra",
+//   "kush pandit",
+//   "matt marchiony",
+//   "boston burke",
+//   "john bradford",
+//   "john daguerre-bradford",
+//   "bella ferraro",
+//   "riley lovett",
+//   "brooke gerlach",
+//   "cara bohmann",
+//   "tj holt",
+// ]);
+// export const guest: Set<string> = new Set<string>([
+//   "rene miller",
+//   "carol miller",
+//   "anne quinn",
+//   "deby lemire",
+//   "dave lemire",
+//   "mady bucher",
+//   "sahil doshi",
+//   "resa pearson",
+//   "tom pearson",
+//   "julia dunbar",
+//   "julia fyffe",
+//   "christina rusinski",
+//   "jamie roe",
+//   "christina tobias",
+//   "basil adams",
+//   "sabrina vega",
+//   "miguel velasco",
+//   "adana mcwhinney",
+//   "klem hallagan",
+//   "james felix",
+//   "dave costello",
+//   "hayley bell",
+//   "joerg bohmann",
+//   "christiane bohmann",
+//   "chuan xia",
+//   "john mcelmurray",
+//   "mary anderson",
+//   "nancy ovitt",
+//   "ruth ovitt",
+//   "thomas ovitt",
+//   "jackie west",
+// ]);
+
 export const getGuestInfo = (guestName: string): Guest | null => {
   switch (guestName) {
     case "nick bohmann":
@@ -41,7 +102,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: room1,
         },
       };
-    case "hugh c quinn" || "beth holloway":
+    case "hugh c quinn":
+    case "beth holloway":
       return {
         name: "Hugh",
         partner: "Beth",
@@ -69,7 +131,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roommate: "Hugh, Beth and Courtney",
         },
       };
-    case "erin kocis" || "seth goebel":
+    case "erin kocis":
+    case "seth goebel":
       return {
         name: "Erin",
         partner: "Seth",
@@ -79,7 +142,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: room3,
         },
       };
-    case "frances shapiro" || "will deuschle":
+    case "frances shapiro":
+    case "will deuschle":
       return {
         name: "Frances",
         partner: "Will",
@@ -99,6 +163,78 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: room4,
         },
       };
+    case "john daguerre-bradford":
+    case "bella ferraro":
+      return {
+        name: "John",
+        partner: "Bella",
+        room: {
+          roomName: "Room 5 - Lapa Roja",
+          roomImage: room5,
+          roommate: "Riley and Brooke",
+        },
+      };
+    case "riley lovett":
+    case "brooke gerlach":
+      return {
+        name: "Riley",
+        partner: "Brooke",
+        room: {
+          roomName: "Room 5 - Lapa Roja",
+          roomImage: room5,
+          roommate: "John and Bella",
+        },
+      };
+    case "ishita ganotra":
+    case "kush pandit":
+      return {
+        name: "Ishita",
+        partner: "Kush",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Matt and Boston",
+        },
+      };
+    case "matt marchiony":
+      return {
+        name: "Matt",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Ishita, Kush and Boston",
+        },
+      };
+    case "Boston Burke":
+      return {
+        name: "Boston",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Ishita, Kush and Matt",
+        },
+      };
+    case "cara bohmann":
+    case "tj holt":
+      return {
+        name: "Cara",
+        partner: "TJ",
+        room: {
+          roomName: "Room 7 - Guaria Morada",
+          roomImage: apt1,
+        },
+      };
+    case "dirk bohmann":
+    case "catherine ovitt":
+      return {
+        name: "mami",
+        partner: "papi",
+        room: {
+          roomName: "Room 8 - Mariposa Morpho",
+          roomImage: apt2,
+        },
+      };
+
     case "rene miller":
       return {
         name: "Aunt Rene",
@@ -119,6 +255,100 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Aunt Deby",
         partner: "Uncle Dave",
+      };
+    case "anne quinn":
+      return {
+        name: "Grandma",
+        partner: "Grandpa",
+      };
+    case "resa pearson":
+    case "tom pearson":
+      return {
+        name: "Aunt Resa",
+        partner: "Uncle Tom",
+      };
+    case "julia dunbar":
+      return {
+        name: "Julia",
+      };
+    case "julia fyffe":
+      return {
+        name: "Julia",
+      };
+    case "christina rusinski":
+      return {
+        name: "Christina",
+      };
+    case "jamie roe":
+      return {
+        name: "Jamie",
+      };
+    case "christina tobias":
+    case "basil adams":
+      return {
+        name: "Christina",
+        partner: "Basil",
+      };
+    case "sabrina vega":
+    case "miguel velasco":
+      return {
+        name: "Sabrina",
+        partner: "Miguel",
+      };
+    case "adana mcwhinney":
+      return {
+        name: "Adana",
+      };
+    case "klem hallagan":
+      return {
+        name: "Klem",
+      };
+    case "james felix":
+      return {
+        name: "James",
+      };
+    case "hayley bell":
+    case "dave costello":
+      return {
+        name: "Hayley",
+        partner: "Dave",
+      };
+    case "chuan xia":
+    case "john mcelmurray":
+      return {
+        name: "Chuan",
+        partner: "John",
+      };
+    case "joerg bohmann":
+    case "christiane bohmann":
+      return {
+        name: "Joerg",
+        partner: "Christiane",
+      };
+    case "mary anderson":
+      return {
+        name: "Aunt Mary",
+        announceOnly: true,
+      };
+    case "nancy ovitt":
+      return {
+        name: "Aunt Nancy",
+        announceOnly: true,
+      };
+    case "ruth ovitt":
+      return {
+        name: "Aunt Ruth",
+        announceOnly: true,
+      };
+    case "thomas ovitt":
+      return {
+        name: "Uncle Thomas",
+        announceOnly: true,
+      };
+    case "jackie west":
+      return {
+        name: "Aunt Jackie",
+        announceOnly: true,
       };
     default:
       return null;

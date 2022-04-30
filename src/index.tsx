@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   // Navigate,
   Route,
   Routes,
@@ -27,7 +27,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
-            path=""
+            path="/"
             element={
               <RequireAuth>
                 <Home />
