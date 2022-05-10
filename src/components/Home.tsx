@@ -368,7 +368,7 @@ export const Home = (): JSX.Element => {
                 <h3 className="costs">
                   Accomodation, chef, maid-service and gratutities:
                 </h3>
-                <p className="costs"> 525</p>
+                <p className="costs"> 595</p>
                 <br />
                 <h3 className="costs">Food and drink:</h3>
                 <p className="costs"> 200</p>
@@ -376,7 +376,7 @@ export const Home = (): JSX.Element => {
                 <hr style={{ width: "272px", float: "left" }} />
                 <br />
                 <h3 className="costs">Total: </h3>
-                <p className="costs">725 / person</p>
+                <p className="costs">795 / person</p>
                 <p style={{ fontStyle: "italic" }}>
                   *If you are unable / do not want to stay the whole week,
                   please let us know and we can adjust!
