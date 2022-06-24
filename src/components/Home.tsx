@@ -378,8 +378,11 @@ export const Home = (): JSX.Element => {
                 <h3 className="costs">Total: </h3>
                 <p className="costs">795 / person</p>
                 <p style={{ fontStyle: "italic" }}>
-                  *If you are unable / do not want to stay the whole week,
-                  please let us know and we can adjust!
+                  ** All of that being said, we totally get if this is not up
+                  your alley, and you'd rather stay somewhere nearby! Just let
+                  us know and we can offer suggestions!! The most important
+                  thing to us is that you enjoy yourself 😊 If you find you can
+                  only stay for part of the week, also let us know!
                 </p>
               </div>
               <a

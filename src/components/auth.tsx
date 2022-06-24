@@ -16,7 +16,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   let [guest, setGuest] = React.useState<Guest | null>(null);
 
   let signin = (username: string, callback: (success: boolean) => void) => {
-    let guestInfo = getGuestInfo(username.toLowerCase());
+    let guestInfo = getGuestInfo(username.toLowerCase().trim());
     global.console.log(guestInfo);
     console.log(guestInfo);
     if (guestInfo) {
@@ -41,28 +41,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 export function useAuth() {
   return React.useContext(AuthContext);
 }
-
-// export function AuthStatus() {
-//   let auth = useAuth();
-//   let navigate = useNavigate();
-
-//   if (!auth.user) {
-//     return <p>You are not logged in.</p>;
-//   }
-
-//   return (
-//     <p>
-//       Welcome {auth.user}!{" "}
-//       <button
-//         onClick={() => {
-//           auth.signout(() => navigate("/"));
-//         }}
-//       >
-//         Sign out
-//       </button>
-//     </p>
-//   );
-// }
 
 export function RequireAuth({ children }: { children: JSX.Element }) {
   let auth = useAuth();

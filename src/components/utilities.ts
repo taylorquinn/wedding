@@ -30,67 +30,6 @@ export const getDaysRemaining = (): number => {
   return Math.trunc(Difference_In_Time / (1000 * 3600 * 24));
 };
 
-// export const house: Set<string> = new Set<string>([
-//   "nick bohmann",
-//   "taylor quinn",
-//   "hugh c quinn",
-//   "beth holloway",
-//   "courtney quinn",
-//   "jo dougherty",
-//   "frances shapiro",
-//   "will deuschle",
-//   "erin kocis",
-//   "seth goebel",
-//   "dirk bohmann",
-//   "catherine ovitt",
-//   "lisa quinn",
-//   "hugh quinn",
-//   "ishita ganotra",
-//   "kush pandit",
-//   "matt marchiony",
-//   "boston burke",
-//   "john bradford",
-//   "john daguerre-bradford",
-//   "bella ferraro",
-//   "riley lovett",
-//   "brooke gerlach",
-//   "cara bohmann",
-//   "tj holt",
-// ]);
-// export const guest: Set<string> = new Set<string>([
-//   "rene miller",
-//   "carol miller",
-//   "anne quinn",
-//   "deby lemire",
-//   "dave lemire",
-//   "mady bucher",
-//   "sahil doshi",
-//   "resa pearson",
-//   "tom pearson",
-//   "julia dunbar",
-//   "julia fyffe",
-//   "christina rusinski",
-//   "jamie roe",
-//   "christina tobias",
-//   "basil adams",
-//   "sabrina vega",
-//   "miguel velasco",
-//   "adana mcwhinney",
-//   "klem hallagan",
-//   "james felix",
-//   "dave costello",
-//   "hayley bell",
-//   "joerg bohmann",
-//   "christiane bohmann",
-//   "chuan xia",
-//   "john mcelmurray",
-//   "mary anderson",
-//   "nancy ovitt",
-//   "ruth ovitt",
-//   "thomas ovitt",
-//   "jackie west",
-// ]);
-
 export const getGuestInfo = (guestName: string): Guest | null => {
   switch (guestName) {
     case "nick bohmann":
@@ -197,6 +136,20 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roommate: "Matt and Boston",
         },
       };
+    case "karen house":
+      return {
+        name: "Ishita",
+        partner: "Kush",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Matt and Boston",
+        },
+      };
+    case "karen guest":
+      return {
+        name: "Aunt Rene",
+      };
     case "matt marchiony":
       return {
         name: "Matt",
@@ -209,11 +162,6 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "Boston Burke":
       return {
         name: "Boston",
-        room: {
-          roomName: "Room 6 - Mono Cariblanco",
-          roomImage: room6,
-          roommate: "Ishita, Kush and Matt",
-        },
       };
     case "cara bohmann":
     case "tj holt":
@@ -275,11 +223,17 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       };
     case "julia dunbar":
       return {
-        name: "Julia",
+        name: "Julia Dunbar",
+      };
+    case "chuan xia":
+    case "john mcelmurray":
+      return {
+        name: "Chuan",
+        partner: "John",
       };
     case "julia fyffe":
       return {
-        name: "Julia",
+        name: "Julia Fyffe",
       };
     case "christina rusinski":
       return {
@@ -292,8 +246,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "christina tobias":
     case "basil adams":
       return {
-        name: "Christina",
-        partner: "Basil",
+        name: "Basil",
+        partner: "Christina",
       };
     case "sabrina vega":
     case "miguel velasco":
@@ -305,13 +259,9 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Adana",
       };
-    case "klem hallagan":
+    case "felix bohmann":
       return {
-        name: "Klem",
-      };
-    case "james felix":
-      return {
-        name: "James",
+        name: "Felix",
       };
     case "hayley bell":
     case "dave costello":
@@ -330,7 +280,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Joerg",
         partner: "Christiane",
-        isFamily: true,
+        announceOnly: true,
       };
     case "mary anderson":
       return {
