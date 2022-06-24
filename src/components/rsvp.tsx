@@ -1,8 +1,10 @@
 import { Guest } from "./utilities";
+import * as React from "react";
 
 type IRsvpProps = { guestInfo: Guest };
 type RequestObject = {
   guest: string;
+  partner: string;
   guestRsvp: string;
   partnerRsvp: string;
   guestSail: string;
@@ -19,8 +21,10 @@ const translateForm = (input: FormDataEntryValue | null): string =>
   input === null ? "yes" : "no";
 
 export const Rsvp = (props: IRsvpProps): JSX.Element => {
+  const [submitted, setSubmitted] = React.useState(false);
   const submitRSVP = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setSubmitted(true);
 
     let formData = new FormData(event.currentTarget);
 
@@ -29,6 +33,7 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
 
     const requestObject: RequestObject = {
       guest: props.guestInfo.name,
+      partner: props.guestInfo.partner || "n/a",
       guestRsvp: translateForm(formData.get("guestRsvp")),
       partnerRsvp: props.guestInfo.partner
         ? translateForm(formData.get("partnerRsvp"))
@@ -47,7 +52,7 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
       accomodationFamily: formData.get("accomodationFamily") as string,
       song: formData.get("song") as string,
     };
-    // makeInsertRequest(requestObject);
+    makeInsertRequest(requestObject);
     console.log(requestObject);
   };
 
@@ -56,7 +61,11 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
       <h1 className="title" style={{ textAlign: "center" }}>
         rsvp
       </h1>
-      <form className="rsvp-form" onSubmit={submitRSVP}>
+      <form
+        style={{ display: submitted ? "none" : "block" }}
+        className="rsvp-form"
+        onSubmit={submitRSVP}
+      >
         <h2>please only rsvp once, unless something has changed!</h2>
 
         <>
@@ -223,6 +232,11 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
           Submit
         </button>
       </form>
+      <h2
+        style={{ display: submitted ? "block" : "none", textAlign: "center" }}
+      >
+        Thanks for RSVP-ing!
+      </h2>
     </div>
   );
 };
