@@ -104,10 +104,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         },
       };
     case "john daguerre-bradford":
-    case "bella ferraro":
       return {
         name: "John",
-        partner: "Bella",
         room: {
           roomName: "Room 5 - Lapa Roja",
           roomImage: room5,
@@ -122,7 +120,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         room: {
           roomName: "Room 5 - Lapa Roja",
           roomImage: room5,
-          roommate: "John and Bella",
+          roommate: "John",
         },
       };
     case "ishita ganotra":
