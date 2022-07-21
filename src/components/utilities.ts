@@ -220,6 +220,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         isFamily: true,
       };
     case "julia dunbar":
+    case "jacob feiertag":
       return {
         name: "Julia",
         partner: "Jake",
