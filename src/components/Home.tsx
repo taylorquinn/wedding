@@ -4,7 +4,7 @@ import van from "../assets/images/van.png";
 import car from "../assets/images/car.png";
 import vista1 from "../assets/images/sched-vista1.jpg";
 import vista2 from "../assets/images/sched-vista2.jpg";
-import hotel from "../assets/images/hotel1.jpg";
+import hotel from "../assets/images/laMariposa.jpg";
 import hostel from "../assets/images/hostel.jpg";
 import airbnb from "../assets/images/airbnb.jpg";
 
@@ -137,7 +137,8 @@ export const Home = (): JSX.Element => {
               <h2 className="event-location">Playa Playita</h2>
               <p className="event-text">
                 Meet us on the beach for a short ceremony in the shade. Attire:
-                cocktail. There will be a shuttle from Villa Mariposa at 4:30.
+                cocktail. There will be a shuttle from La Mariposa (time coming
+                soon).
               </p>
               <h1 className="event-title">Reception</h1>
               <h2 className="event-time">6:00PM</h2>
@@ -419,21 +420,22 @@ export const Home = (): JSX.Element => {
             <div style={{ display: "flex", flexWrap: "wrap" }}>
               <div className="hotel">
                 <img src={hotel} />
-                <h2>Mango Moon Villa</h2>
-                <h3>$86-$350 / night</h3>
+                <h2>La Mariposa</h2>
+                <h3>Room block- discounted price coming soon</h3>
                 <p>
                   This hotel has rave reviews and a pool. It is a 5 min walk to
                   the reception space and 15 min walk to the beach. We will
                   provide a shuttle to this hotel for those who wish to avail of
-                  it.
+                  it. We have a room block organized at this hotel, more details
+                  coming soon.
                 </p>
-                <a
+                {/* <a
                   className="button-74"
                   target="_blank"
                   href="https://www.booking.com/hotel/cr/mango-moon.html?aid=304142&label=gen173bo-1DCAsoM0IKbWFuZ28tbW9vbkgzWANotAKIAQGYATG4AQfIAQzYAQPoAQH4AQqIAgGYAgKoAgO4Aufhh5AGwAIB0gIkMzZmN2E0NDYtMTM2MC00YmU2LWE5NGMtNWMwZDMyYjAzNGZm2AIE4AIB&sid=56778b183c6a78bc1eb30faeb8a54704&sb=1&src=hotel&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fcr%2Fmango-moon.html%3Faid%3D304142%3Blabel%3Dgen173bo-1DCAsoM0IKbWFuZ28tbW9vbkgzWANotAKIAQGYATG4AQfIAQzYAQPoAQH4AQqIAgGYAgKoAgO4Aufhh5AGwAIB0gIkMzZmN2E0NDYtMTM2MC00YmU2LWE5NGMtNWMwZDMyYjAzNGZm2AIE4AIB%3Bsid%3D56778b183c6a78bc1eb30faeb8a54704%3Ball_sr_blocks%3D126747804_85017829_0_1_0%3Bcheckin%3D2022-12-03%3Bcheckout%3D2022-12-04%3Bdest_id%3D900048717%3Bdest_type%3Dcity%3Bdist%3D0%3Bgroup_adults%3D2%3Bgroup_children%3D0%3Bhapos%3D1%3Bhighlighted_blocks%3D126747804_85017829_0_1_0%3Bhpos%3D1%3Bmatching_block_id%3D126747804_85017829_0_1_0%3Bno_rooms%3D1%3Breq_adults%3D2%3Breq_children%3D0%3Broom1%3DA%252CA%3Bsb_price_type%3Dtotal%3Bsr_order%3Dpopularity%3Bsr_pri_blocks%3D126747804_85017829_0_1_0__8640%3Bsrepoch%3D1644294631%3Bsrpvid%3D7ed91fb24d4c00b2%3Btype%3Dtotal%3Bucfs%3D1%26%3B&highlighted_hotels=1267478&hp_sbox=1&origin=hp&hp_avform=1&do_availability_check=on&stay_on_hp=1&highlighted_blocks=126747804_85017829_0_1_0&checkin_year=2023&checkin_month=3&checkin_monthday=4&checkout_year=2023&checkout_month=3&checkout_monthday=8&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1#availability_target"
                 >
                   Book Hotel
-                </a>
+                </a> */}
               </div>
               <div className="hotel">
                 <img src={hostel} />

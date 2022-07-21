@@ -223,7 +223,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       };
     case "julia dunbar":
       return {
-        name: "Julia Dunbar",
+        name: "Julia",
+        partner: "Jake",
       };
     case "chuan xia":
     case "john mcelmurray":
@@ -233,7 +234,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       };
     case "julia fyffe":
       return {
-        name: "Julia Fyffe",
+        name: "Julia",
       };
     case "christina rusinski":
       return {

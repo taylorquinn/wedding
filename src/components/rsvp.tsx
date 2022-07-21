@@ -12,13 +12,31 @@ type RequestObject = {
   guestPicnic: string;
   partnerPicnic: string;
   food: string;
-  house: string;
+  houseChoice: string;
+  houseQ: string;
   accomodationConnect: string;
-  accomodationFamily: string;
+  accomodationFamilyChoice: string;
+  accomodationConnectChoice: string;
   song: string;
 };
 const translateForm = (input: FormDataEntryValue | null): string =>
   input === null ? "yes" : "no";
+
+const getHouseChoice = (formData: FormData): string => {
+  if (formData.get("house_yes")) {
+    return "yes";
+  }
+  if (formData.get("house_part")) {
+    return "part";
+  }
+  if (formData.get("house_nope")) {
+    return "nope";
+  }
+  if (formData.get("house_maybe")) {
+    return "maybe";
+  }
+  return "---";
+};
 
 export const Rsvp = (props: IRsvpProps): JSX.Element => {
   const [submitted, setSubmitted] = React.useState(false);
@@ -27,10 +45,6 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
     setSubmitted(true);
 
     let formData = new FormData(event.currentTarget);
-
-    // let food = formData.get("foodRsvp") as string;
-    // let house = (formData.get("foodRsvp") as string) || "---";
-
     const requestObject: RequestObject = {
       guest: props.guestInfo.name,
       partner: props.guestInfo.partner || "n/a",
@@ -47,9 +61,13 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
         ? translateForm(formData.get("partnerPicnic"))
         : "n/a",
       food: formData.get("foodRsvp") as string,
-      house: "---",
+      houseChoice: getHouseChoice(formData),
+      houseQ: formData.get("houseQ") as string,
       accomodationConnect: translateForm(formData.get("accomodationConnect")),
-      accomodationFamily: formData.get("accomodationFamily") as string,
+      accomodationConnectChoice: formData.get(
+        "accomodationConnectChoice"
+      ) as string,
+      accomodationFamilyChoice: formData.get("accomodationFamily") as string,
       song: formData.get("song") as string,
     };
     makeInsertRequest(requestObject);
@@ -161,27 +179,34 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
         {props.guestInfo.room ? (
           <>
             <h2>Are you interested in staying in the house?</h2>
-            <input type="radio" id="html" name="fav_language" value="HTML" />
+            <input type="radio" id="html" name="house_yes" value="HTML" />
             <label>Yes!!</label>
             <br />
             <input
               type="radio"
               id="javascript"
-              name="fav_language"
+              name="house_part"
               value="JavaScript"
             />
             <label>Yes, but not the whole time</label>
             <br />
-            <input type="radio" id="css" name="fav_language" value="CSS" />
+            <input type="radio" id="css" name="house_nope" value="CSS" />
             <label>Nope</label>
             <br />
             <input
               type="radio"
               id="javascript"
-              name="fav_language"
+              name="house_maybe"
               value="JavaScript"
             />
             <label>Not yet sure</label>
+            <h2>Any questions, comments or concerns about the house?</h2>
+            <input
+              name="houseQ"
+              type="text"
+              className="rsvp-input-box"
+              placeholder=""
+            />
           </>
         ) : !props.guestInfo.isFamily ? (
           <>
@@ -201,7 +226,7 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
             <>
               <h2>Have you chosen accomodation?</h2>
               <input
-                name="accomodationFamily"
+                name="accomodationConnectChoice"
                 type="text"
                 className="rsvp-input-box"
                 placeholder="yes- we're staying at ... or not yet!"
