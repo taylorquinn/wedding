@@ -111,7 +111,7 @@ export const Home = (): JSX.Element => {
 
             <h1 className="schedule-date">Sunday</h1>
             <h1 className="event-title">Sunset Sail</h1>
-            <h2 className="event-time">2:00PM - 6:00PM</h2>
+            <h2 className="event-time">1:00PM - 6:00PM (pickup time TBD)</h2>
             <h2 className="event-location">Playa Escondida</h2>
             <p className="event-text">
               Wear a swim suit & join us for a welcome dinner + drinks on a
@@ -133,7 +133,7 @@ export const Home = (): JSX.Element => {
 
             <div className="agenda">
               <h1 className="event-title">Ceremony</h1>
-              <h2 className="event-time">5:00PM</h2>
+              <h2 className="event-time">3:30PM</h2>
               <h2 className="event-location">Playa Playita</h2>
               <p className="event-text">
                 Meet us on the beach for a short ceremony in the shade. Attire:
@@ -249,11 +249,12 @@ export const Home = (): JSX.Element => {
         <div className="transport-container">
           <div className="transport">
             <img src={plane} className="icon" />
-            <h2>Fly into San Jose</h2>
+            <h2>Fly into San Jose (SJO)</h2>
             <p>
-              The largest nearby aiport is San Jose. From there it is a 3-4 hour
-              drive to Manuel Antonio. From the west coast, you will probably
-              find that a red-eye is ideal.
+              The largest nearby aiport is San José (SJO; not the one in
+              California!). From there it is a 3-4 hour drive to Manuel Antonio.
+              From the west coast, you will probably find that a red-eye is
+              ideal.
             </p>
             <a
               className="button-74"
@@ -268,8 +269,9 @@ export const Home = (): JSX.Element => {
             <h2>Shuttle</h2>
             <p>
               There are both private (~$150) and shared shuttles (~$42-$50 each)
-              that run from SJO to Manuel Antonio. We can help with coordination
-              for those who would like to share a private shuttle.
+              that run from SJO to Manuel Antonio. Please contact Susan
+              (susan@mavrentals.com) for help with coordination. She will group
+              guests together based on arrival time to help with costs!
             </p>
           </div>
           <div className="transport">
