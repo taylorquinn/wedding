@@ -145,7 +145,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roommate: "John",
         },
       };
-    case "Boston Burke":
+    case "boston burke":
       return {
         name: "Boston",
         room: {
