@@ -109,6 +109,7 @@
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .menu a {
   padding: 0px 16px 0px 0px;
