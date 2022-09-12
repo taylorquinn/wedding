@@ -78,8 +78,8 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         partner: "Seth",
         room: {
           roomName: "Room 3 - Toucan",
-          roommate: "Frances and Will",
           roomImage: room3,
+          roommate: "Ishita and Kush",
         },
       };
     case "ishita ganotra":
@@ -122,7 +122,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         room: {
           roomName: "Room 5 - Lapa Roja",
           roomImage: room5,
-          roommate: "John",
+          roommate: "Matt and Amanda",
         },
       };
     case "john daguerre-bradford":
@@ -131,7 +131,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         room: {
           roomName: "Room 6 - Mono Cariblanco",
           roomImage: room6,
-          roommate: "Matt and Amanda",
+          roommate: "Cara and TJ",
         },
       };
     case "cara bohmann":
@@ -142,7 +142,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         room: {
           roomName: "Room 6 - Mono Cariblanco",
           roomImage: room6,
-          roommate: "Ishita, Kush",
+          roommate: "John",
         },
       };
     case "Boston Burke":
