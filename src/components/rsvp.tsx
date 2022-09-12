@@ -12,6 +12,8 @@ type RequestObject = {
   guestPicnic: string;
   partnerPicnic: string;
   food: string;
+  guestBoatFood: string;
+  partnerBoatFood: string;
   houseChoice: string;
   houseQ: string;
   accomodationConnect: string;
@@ -21,22 +23,6 @@ type RequestObject = {
 };
 const translateForm = (input: FormDataEntryValue | null): string =>
   input === null ? "yes" : "no";
-
-const getHouseChoice = (formData: FormData): string => {
-  if (formData.get("house_yes")) {
-    return "yes";
-  }
-  if (formData.get("house_part")) {
-    return "part";
-  }
-  if (formData.get("house_nope")) {
-    return "nope";
-  }
-  if (formData.get("house_maybe")) {
-    return "maybe";
-  }
-  return "---";
-};
 
 export const Rsvp = (props: IRsvpProps): JSX.Element => {
   const [submitted, setSubmitted] = React.useState(false);
@@ -61,7 +47,9 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
         ? translateForm(formData.get("partnerPicnic"))
         : "n/a",
       food: formData.get("foodRsvp") as string,
-      houseChoice: getHouseChoice(formData),
+      guestBoatFood: formData.get("guestBoatFood") as string,
+      partnerBoatFood: formData.get("partnerBoatFood") as string,
+      houseChoice: formData.get("house") as string,
       houseQ: formData.get("houseQ") as string,
       accomodationConnect: translateForm(formData.get("accomodationConnect")),
       accomodationConnectChoice: formData.get(
@@ -167,8 +155,63 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
             </div>
           )}
         </>
-
-        <h2>Any food restrictions? </h2>
+        <>
+          <h2>Which meal would you prefer for the welcome sail?</h2>
+          <div style={{ paddingLeft: "16px" }}>
+            {props.guestInfo.partner && <p>{props.guestInfo.name}</p>}
+            <input
+              type="radio"
+              name="guestBoatFood"
+              value="chicken"
+              id="chicken"
+            />
+            <label htmlFor="chicken">Sauteed chicken breast</label>
+            <br />
+            <input type="radio" name="guestBoatFood" value="fish" id="fish" />
+            <label htmlFor="fish">Fresh fish filet of the day with salsa</label>
+            <br />
+            <input
+              type="radio"
+              name="guestBoatFood"
+              value="cauliflower-curry"
+              id="cauliflower-curry"
+            />
+            <label htmlFor="cauliflower-curry">Cauliflower coconut curry</label>
+            {props.guestInfo.partner && (
+              <>
+                <p>{props.guestInfo.partner}</p>
+                <input
+                  type="radio"
+                  name="partnerBoatFood"
+                  value="chicken"
+                  id="chicken-partner"
+                />
+                <label htmlFor="chicken-partner">Sauteed chicken breast</label>
+                <br />
+                <input
+                  type="radio"
+                  name="partnerBoatFood"
+                  value="fish"
+                  id="fish-partner"
+                />
+                <label htmlFor="fish-partner">
+                  Fresh fish filet of the day with salsa
+                </label>
+                <br />
+                <input
+                  type="radio"
+                  name="partnerBoatFood"
+                  value="cauliflower-curry"
+                  id="cauliflower-curry-partner"
+                />
+                <label htmlFor="cauliflower-curry-partner">
+                  Cauliflower coconut curry
+                </label>
+              </>
+            )}
+          </div>
+        </>
+        <h2>Any dietary restrictions? </h2>
         <input
           name="foodRsvp"
           type="text"
@@ -179,27 +222,37 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
         {props.guestInfo.room ? (
           <>
             <h2>Are you interested in staying in the house?</h2>
-            <input type="radio" id="html" name="house_yes" value="HTML" />
-            <label>Yes!!</label>
+            <input
+              type="radio"
+              name="house"
+              id="house_yes"
+              value="house- yes"
+            />
+            <label htmlFor="house_yes">Yes!!</label>
             <br />
             <input
               type="radio"
-              id="javascript"
-              name="house_part"
-              value="JavaScript"
+              id="house_part"
+              name="house"
+              value="house-part of the time"
             />
-            <label>Yes, but not the whole time</label>
-            <br />
-            <input type="radio" id="css" name="house_nope" value="CSS" />
-            <label>Nope</label>
+            <label htmlFor="house_part">Yes, but not the whole time</label>
             <br />
             <input
               type="radio"
-              id="javascript"
-              name="house_maybe"
-              value="JavaScript"
+              name="house"
+              id="house_nope"
+              value="house- nope"
             />
-            <label>Not yet sure</label>
+            <label htmlFor="house_nope">Nope</label>
+            <br />
+            <input
+              type="radio"
+              id="house_maybe"
+              name="house"
+              value="house- not sure yet"
+            />
+            <label htmlFor="house_maybe">Not yet sure</label>
             <h2>Any questions, comments or concerns about the house?</h2>
             <input
               name="houseQ"
@@ -213,6 +266,13 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
             <h2>
               Would you be interested in connecting with our other friends to
               find nearby airbnbs?
+              <a
+                target="_blank"
+                className="whatsappLink"
+                href="https://chat.whatsapp.com/EYPV0eSaF3sHZ6tZTsW0cv"
+              >
+                Join Whatsapp Group
+              </a>
             </h2>
             <div className="button r" id="button-3">
               <input

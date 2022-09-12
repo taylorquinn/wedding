@@ -249,7 +249,7 @@ export const Home = (): JSX.Element => {
         <div className="transport-container">
           <div className="transport">
             <img src={plane} className="icon" />
-            <h2>Fly into San Jose (SJO)</h2>
+            <h2>Fly into San José (SJO)</h2>
             <p>
               The largest nearby aiport is San José (SJO; not the one in
               California!). From there it is a 3-4 hour drive to Manuel Antonio.

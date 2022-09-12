@@ -82,11 +82,11 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: room3,
         },
       };
-    case "frances shapiro":
-    case "will deuschle":
+    case "ishita ganotra":
+    case "kush pandit":
       return {
-        name: "Frances",
-        partner: "Will",
+        name: "Ishita",
+        partner: "Kush",
         room: {
           roomName: "Room 3 - Toucan",
           roomImage: room3,
@@ -103,9 +103,11 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: room4,
         },
       };
-    case "john daguerre-bradford":
+    case "matt marchiony":
+    case "amanda levine":
       return {
-        name: "John",
+        name: "Matt",
+        partner: "Amanda",
         room: {
           roomName: "Room 5 - Lapa Roja",
           roomImage: room5,
@@ -123,49 +125,39 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roommate: "John",
         },
       };
-    case "ishita ganotra":
-    case "kush pandit":
+    case "john daguerre-bradford":
       return {
-        name: "Ishita",
-        partner: "Kush",
+        name: "John",
         room: {
           roomName: "Room 6 - Mono Cariblanco",
           roomImage: room6,
-          roommate: "Matt and Boston",
+          roommate: "Matt and Amanda",
         },
-      };
-    case "karen house":
-      return {
-        name: "Ishita",
-        partner: "Kush",
-        room: {
-          roomName: "Room 6 - Mono Cariblanco",
-          roomImage: room6,
-          roommate: "Matt and Boston",
-        },
-      };
-    case "karen guest":
-      return {
-        name: "Aunt Rene",
-      };
-    case "matt marchiony":
-      return {
-        name: "Matt",
-        room: {
-          roomName: "Room 6 - Mono Cariblanco",
-          roomImage: room6,
-          roommate: "Ishita, Kush and Boston",
-        },
-      };
-    case "Boston Burke":
-      return {
-        name: "Boston",
       };
     case "cara bohmann":
     case "tj holt":
       return {
         name: "Cara",
         partner: "TJ",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Ishita, Kush",
+        },
+      };
+    case "Boston Burke":
+      return {
+        name: "Boston",
+        room: {
+          roomName: "TV room",
+          roomImage: room6,
+        },
+      };
+    case "frances shapiro":
+    case "will deuschle":
+      return {
+        name: "Frances",
+        partner: "Will",
         room: {
           roomName: "Room 7 - Guaria Morada",
           roomImage: apt1,
@@ -263,6 +255,14 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Felix",
       };
+    case "trey mckula":
+      return {
+        name: "Trey",
+      };
+    case "Sam Winebrake":
+      return {
+        name: "Sam",
+      };
     case "hayley bell":
     case "dave costello":
       return {
@@ -306,6 +306,20 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Aunt Jackie",
         announceOnly: true,
+      };
+    case "karen house":
+      return {
+        name: "Ishita",
+        partner: "Kush",
+        room: {
+          roomName: "Room 6 - Mono Cariblanco",
+          roomImage: room6,
+          roommate: "Matt and Amanda",
+        },
+      };
+    case "karen guest":
+      return {
+        name: "Aunt Rene",
       };
     default:
       return null;

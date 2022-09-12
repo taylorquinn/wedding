@@ -583,6 +583,13 @@ a:hover {
   width: calc(100% - 48px);
 }
 
+.whatsappLink {
+  color: #457b9d;
+}
+.whatsappLink:hover {
+  color: #01a9f4;
+}
+
 .named-question {
   display: flex;
   height: 36px;
@@ -625,18 +632,18 @@ a:hover {
   margin: 0;
   opacity: 0;
   cursor: pointer;
-  z-index: 3;
+  z-index: 2;
 }
 
 .knobs {
-  z-index: 2;
+  z-index: 1;
 }
 
 .layer {
   width: 100%;
   background-color: #ebf7fc;
   transition: 0.3s ease all;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Button 3 */
