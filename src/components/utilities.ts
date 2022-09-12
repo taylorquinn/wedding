@@ -7,6 +7,7 @@ import room5 from "../assets/images/room-5-lapa.jpg";
 import room6 from "../assets/images/room-6-mono.jpg";
 import apt1 from "../assets/images/room-7.jpg";
 import apt2 from "../assets/images/room-8.jpg";
+import tvroom from "../assets/images/tvroom.jpg";
 
 export type Guest = {
   name: string;
@@ -150,7 +151,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Boston",
         room: {
           roomName: "TV room",
-          roomImage: room6,
+          roomImage: tvroom,
         },
       };
     case "frances shapiro":
