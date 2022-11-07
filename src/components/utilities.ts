@@ -185,6 +185,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Grandma",
         partner: "Grandpa",
         isFamily: true,
+        announceOnly: true,
       };
     case "mady bucher":
     case "sahil doshi":
@@ -260,9 +261,17 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Trey",
       };
-    case "Sam Winebrake":
+    case "sam winebrake":
       return {
         name: "Sam",
+      };
+    case "diane hadley":
+      return {
+        name: "Diane",
+      };
+    case "krista opsahl-ong":
+      return {
+        name: "Krista",
       };
     case "hayley bell":
     case "dave costello":
