@@ -78,7 +78,9 @@ export const Rsvp = (props: IRsvpProps): JSX.Element => {
           <h2>SUNDAY ⛵️ afternoon welcome sail?</h2>
           <div className="named-question">
             <label className="rsvp-name">
-              {props.guestInfo.partner ? props.guestInfo.name : "RSVP"}
+              {props.guestInfo && props.guestInfo.partner
+                ? props.guestInfo.name
+                : "RSVP"}
             </label>
             <div className="button r" id="button-3">
               <input name="guestSail" type="checkbox" className="checkbox" />

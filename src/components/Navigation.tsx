@@ -11,38 +11,38 @@ export const Navigation = (): JSX.Element => {
         <>
           <div className="nav-background"></div>
           <div className="navigation">
-            {/* <a href="#header">t♥️n</a> */}
-
-            <div className="menu">
-              <a
-                onClick={() => {
-                  document.getElementById("schedule")!.scrollIntoView();
-                }}
-              >
-                The Schedule
-              </a>
-              <a
-                onClick={() => {
-                  document.getElementById("gettingThere")!.scrollIntoView();
-                }}
-              >
-                Getting There
-              </a>
-              <a
-                onClick={() => {
-                  document.getElementById("accomodations")!.scrollIntoView();
-                }}
-              >
-                Accomodations
-              </a>
-              <a
-                onClick={() => {
-                  document.getElementById("rsvp")!.scrollIntoView();
-                }}
-              >
-                RSVP
-              </a>
-            </div>
+            {!auth.guest.announceOnly && (
+              <div className="menu">
+                <a
+                  onClick={() => {
+                    document.getElementById("schedule")!.scrollIntoView();
+                  }}
+                >
+                  The Schedule
+                </a>
+                <a
+                  onClick={() => {
+                    document.getElementById("gettingThere")!.scrollIntoView();
+                  }}
+                >
+                  Getting There
+                </a>
+                <a
+                  onClick={() => {
+                    document.getElementById("accomodations")!.scrollIntoView();
+                  }}
+                >
+                  Accomodations
+                </a>
+                <a
+                  onClick={() => {
+                    document.getElementById("rsvp")!.scrollIntoView();
+                  }}
+                >
+                  RSVP
+                </a>
+              </div>
+            )}
           </div>
         </>
       )}
