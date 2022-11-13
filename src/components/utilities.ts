@@ -174,18 +174,10 @@ export const getGuestInfo = (guestName: string): Guest | null => {
           roomImage: apt2,
         },
       };
-
     case "rene miller":
       return {
         name: "Aunt Rene",
         isFamily: true,
-      };
-    case "carol miller":
-      return {
-        name: "Grandma",
-        partner: "Grandpa",
-        isFamily: true,
-        announceOnly: true,
       };
     case "mady bucher":
     case "sahil doshi":
@@ -195,15 +187,10 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       };
     case "deby lemire":
     case "dave lemire":
+    case "david lemire":
       return {
         name: "Aunt Deby",
         partner: "Uncle Dave",
-        isFamily: true,
-      };
-    case "ann quinn":
-      return {
-        name: "Grandma",
-        partner: "Grandpa",
         isFamily: true,
       };
     case "resa pearson":
@@ -234,8 +221,10 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Christina",
       };
     case "jamie roe":
+    case "charlie moore":
       return {
         name: "Jamie",
+        partner: "Charlie",
       };
     case "christina tobias":
     case "basil adams":
@@ -285,11 +274,47 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Chuan",
         partner: "John",
       };
+    // announce only
+    case "carol miller":
+      return {
+        name: "Grandma",
+        partner: "Grandpa",
+        isFamily: true,
+        announceOnly: true,
+      };
+    case "ann quinn":
+      return {
+        name: "Grandma",
+        partner: "Grandpa",
+        announceOnly: true,
+      };
     case "joerg bohmann":
+    case "jörg bohmann":
     case "christiane bohmann":
       return {
-        name: "Joerg",
+        name: "Jörg",
         partner: "Christiane",
+        announceOnly: true,
+      };
+    case "frank bohmann":
+    case "ruth bohmann":
+      return {
+        name: "Frank",
+        partner: "Ruth",
+        announceOnly: true,
+      };
+    case "kerstin bohmann":
+    case "ingrid bohmann":
+      return {
+        name: "Kerstin",
+        partner: "Ingrid",
+        announceOnly: true,
+      };
+    case "jeanmarie jonston":
+    case "greg jonston":
+      return {
+        name: "Aunt Jeanmarie",
+        partner: "Uncle Greg",
         announceOnly: true,
       };
     case "mary anderson":
@@ -300,6 +325,19 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "nancy ovitt":
       return {
         name: "Aunt Nancy",
+        announceOnly: true,
+      };
+    case "pete miller":
+    case "peter miller":
+    case "libby miller":
+      return {
+        name: "Uncle Pete",
+        partner: "Aunt Libby",
+        announceOnly: true,
+      };
+    case "gail ovitt":
+      return {
+        name: "Aunt Gail",
         announceOnly: true,
       };
     case "ruth ovitt":
@@ -315,6 +353,34 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "jackie west":
       return {
         name: "Aunt Jackie",
+        announceOnly: true,
+      };
+    case "brian kilb":
+    case "lynn kilb":
+      return {
+        name: "Uncle Brian",
+        partner: "Aunt Lynn",
+        announceOnly: true,
+      };
+    case "paula pilarski":
+    case "jack pilarski":
+      return {
+        name: "Paula",
+        partner: "Jack",
+        announceOnly: true,
+      };
+    case "mary bohan":
+    case "brad bennett":
+      return {
+        name: "Mr. Bennett",
+        partner: "Mrs. Bohan",
+        announceOnly: true,
+      };
+    case "billy fritz":
+    case "kelly fritz":
+      return {
+        name: "Uncle Billy",
+        partner: "Aunt Kelly",
         announceOnly: true,
       };
     case "karen house":
