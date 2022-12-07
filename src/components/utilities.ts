@@ -280,6 +280,14 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Chuan",
         partner: "John",
       };
+    case "sarah balles":
+      return {
+        name: "Sarah",
+      };
+    case "jon williams":
+      return {
+        name: "Jon",
+      };
     // announce only
     case "carol miller":
       return {
