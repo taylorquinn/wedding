@@ -185,6 +185,12 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Mady",
         partner: "Sahil",
       };
+    case "mohona ahmed":
+    case "mir ahmend":
+      return {
+        name: "Mohona",
+        partner: "Mir",
+      };
     case "deby lemire":
     case "dave lemire":
     case "david lemire":

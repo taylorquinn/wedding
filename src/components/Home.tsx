@@ -404,6 +404,11 @@ export const Home = (): JSX.Element => {
                     <br />
                     <h3 className="costs">Total: </h3>
                     <p className="costs">795 / person</p>
+                    <br />
+                    <h3 className="costs">
+                      If you're planning to stay in the house with us, please
+                      send your total payment to Taylor via Zelle by 12/15.
+                    </h3>
                     <p style={{ fontStyle: "italic" }}>
                       ** All of that being said, we totally get if this is not
                       up your alley, and you'd rather stay somewhere nearby!
