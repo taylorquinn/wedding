@@ -231,6 +231,11 @@ export const getGuestInfo = (guestName: string): Guest | null => {
         name: "Petra",
         partner: "Andrew",
       };
+    case "monika jones":
+      return {
+        name: "Monika",
+        partner: "Nathan",
+      };
     case "stella shannon":
       return {
         name: "Stella",
