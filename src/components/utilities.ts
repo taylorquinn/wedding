@@ -222,6 +222,20 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Julia",
       };
+    case "kelli frank":
+      return {
+        name: "Kelli",
+      };
+    case "petra grutzik":
+      return {
+        name: "Petra",
+        partner: "Andrew",
+      };
+    case "stella shannon":
+      return {
+        name: "Stella",
+        partner: "Leo",
+      };
     case "christina rusinski":
       return {
         name: "Christina",
@@ -267,6 +281,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "krista opsahl-ong":
       return {
         name: "Krista",
+        partner: "Q",
       };
     case "hayley bell":
     case "dave costello":
