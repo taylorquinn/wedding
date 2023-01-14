@@ -303,17 +303,24 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Jon",
       };
-    case "evan pepper":
-      return {
-        name: "Evan",
-      };
     case "wolfe glick":
     case "haley weiss":
       return {
         name: "Wolfe",
         partner: "Haley",
       };
-
+    case "natalie rodeman":
+    case "joe baier":
+      return {
+        name: "Natalie",
+        partner: "Joe",
+      };
+    case "courtney newberry":
+    case "patrick anzalone":
+      return {
+        name: "Courtney",
+        partner: "Pat",
+      };
     // announce only
     case "carol miller":
       return {
