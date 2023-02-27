@@ -12,7 +12,6 @@ import { getDaysRemaining, getGuestInfo } from "./utilities";
 
 import { useAuth } from "./auth";
 import "./Home.css";
-import { Rsvp } from "./rsvp";
 
 export const Home = (): JSX.Element => {
   let auth = useAuth();
@@ -39,8 +38,26 @@ export const Home = (): JSX.Element => {
               <br /> While we have elected to have a small destination wedding,
               we both feel that we couldn’t properly celebrate without sharing
               this moment with you.
+              <br />
               <br /> We would love if you would join us virtually to share in
-              the ceremony and have a toast to our union. More details to come.
+              the ceremony and have a toast to our union.
+              <br />
+              <br /> The ceremony will start promptly at <b>3:50 pm Central Time (4:50 ET)</b> with the processional.
+              We will start the Zoom at <b>3:30 CT (4:30 ET)</b>, to allow for time for people to join. We hope
+              to see you there! If there are any technical difficulties, do not worry. We will be recording the
+              ceremony and will send out a video afterwards. 
+              <br />
+              <br />
+
+              <a href="https://urmc.zoom.us/j/99085598299"><b>Click here to join the zoom at 3:30 CT on Monday March 6.</b></a>
+              <br />
+              <br /> We have also received a few questions about a registry - as we are planning to move abroad
+              in the next year, we are not in need of normal registry items. If you would like to contribute towards
+              our next chapter, we have created a <a href="https://www.travelersjoy.com/taylorandnick2023/">honeymoon fund registry online.</a> We truly are just excited to
+              get to celebrate with you!
+              <br />
+
+
             </p>
             <p>With love,</p>
             <p className="signature">Taylor + Nick</p>
@@ -65,18 +82,48 @@ export const Home = (): JSX.Element => {
             </p>
             <p>With love,</p>
             <p className="signature">Taylor + Nick</p>
+            <br />
+            FAQs:
+            <br />
+            <b> Is my shuttle from the airport confirmed?</b>
+            <br /> Yes! Let us know if you need the confirmation resent.
+            <br />
+            <br />  <b>What should I pack?</b>
+            <br />  🥂 Wedding day attire (see below)
+            <br />   🌊 Swimsuits!
+            <br />    🐠 Reef safe (mineral) sunscreen - <a href="https://www.amazon.com/All-Good-Sports-Sunscreen-Combo/dp/B07GNTX91J/ref=sr_1_6?keywords=all+good+sunscreen&qid=1675561360&sr=8-6">this one is our favorite</a>
+            <br />   🦟 Bug spray (travel sized!)
+            <br />    😎 Sunglasses
+            <br />    🤿 Vacation wear
+            <br />   <br />
+            <b> What should I wear on the boat for the welcome dinner on Sunday?</b>
+            <br />  Think yacht party - swimsuit + cute cove-rup 🛥️ (eyepatches strictly forbidden .. seriously 🏴‍☠️)
+            <br />
+            <br /> <b> How am I getting to the boat for the welcome dinner on Sunday?</b>
+            <br />   We will have shuttles to bring guests to and from the boat in Quepos -- pick up locations to be announced.
+            <br />
+            <br /> <b> What should I wear to the wedding on Monday?</b>
+            <br />   Ladies: Think <a href="https://www.brides.com/cocktail-attire-wedding-4844364">cocktail</a> - midi-dress, long dress, jumpsuit, etc, all are welcome.
+            If you're stuck on what color, feel free to choose something in the blues and greens.
+            For shoes - the ceremony is on the beach, so keep that in mind. Dressy sandals / shorter block heels recommended.
+            <br />  Men: The groom will be wearing a full suit with no tie; generally jacket + tie are not required,
+            but long slacks + dress shirt requested. Nice shoes recommended, please avoid sandals.
+            <br />
+            <br /> <b>  Are you registered anywhere?</b>
+            <br /> Your presence at our big day is present enough! However, if you would like to contribute towards
+            our next chapter, we have created a <a href="https://www.travelersjoy.com/taylorandnick2023/">honeymoon fund registry online.</a> We truly are just excited to
+            get to celebrate with you!
           </div>
         )}
-        <button
-          className="countdown"
-          onClick={() => {
-            document.getElementById("rsvp")!.scrollIntoView();
-          }}
-        >
-          <h2 className="countTitle">The fun begins in:</h2>
-          <h1 className="count">{daysRemaining} days</h1>
-          <h1 className="rsvp">RSVP</h1>
-        </button>
+        <a  href="https://urmc.zoom.us/j/99085598299">
+          <button
+            className="countdown"
+
+          >
+            <h2 className="countTitle">The fun begins in:</h2>
+            <h1 className="count">{daysRemaining} days</h1>
+            <h1 className="rsvp">Join Ceremony on Zoom</h1>
+          </button></a>
       </div>
       {!auth.guest?.announceOnly && (
         <>
@@ -541,7 +588,6 @@ export const Home = (): JSX.Element => {
               </svg>
             </div>
           </div>
-          <Rsvp guestInfo={auth.guest!} />
         </>
       )}
     </div>

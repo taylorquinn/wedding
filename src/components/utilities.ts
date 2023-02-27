@@ -190,6 +190,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Mohona",
         partner: "Mir",
+        announceOnly: true,
       };
     case "deby lemire":
     case "dave lemire":
@@ -217,6 +218,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
       return {
         name: "Chuan",
         partner: "John",
+        announceOnly: true,
       };
     case "julia fyffe":
       return {
@@ -225,21 +227,6 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "kelli frank":
       return {
         name: "Kelli",
-      };
-    case "petra grutzik":
-      return {
-        name: "Petra",
-        partner: "Andrew",
-      };
-    case "monika jones":
-      return {
-        name: "Monika",
-        partner: "Nathan",
-      };
-    case "stella shannon":
-      return {
-        name: "Stella",
-        partner: "Leo",
       };
     case "christina rusinski":
       return {
@@ -270,6 +257,7 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "felix bohmann":
       return {
         name: "Felix",
+        announceOnly: true,
       };
     case "trey mckula":
       return {
@@ -282,49 +270,58 @@ export const getGuestInfo = (guestName: string): Guest | null => {
     case "diane hadley":
       return {
         name: "Diane",
+        announceOnly: true,
       };
     case "krista opsahl-ong":
       return {
         name: "Krista",
         partner: "Q",
+        announceOnly: true,
       };
     case "hayley bell":
     case "dave costello":
       return {
         name: "Hayley",
         partner: "Dave",
+        announceOnly: true,
       };
     case "chuan xia":
     case "john mcelmurray":
       return {
         name: "Chuan",
         partner: "John",
+        announceOnly: true,
       };
     case "sarah balles":
       return {
         name: "Sarah",
+        announceOnly: true,
       };
     case "jon williams":
       return {
         name: "Jon",
+        announceOnly: true,
       };
     case "wolfe glick":
     case "haley weiss":
       return {
         name: "Wolfe",
         partner: "Haley",
+        announceOnly: true,
       };
     case "natalie rodeman":
     case "joe baier":
       return {
         name: "Natalie",
         partner: "Joe",
+        announceOnly: true,
       };
     case "courtney newberry":
     case "patrick anzalone":
       return {
         name: "Courtney",
         partner: "Pat",
+        announceOnly: true,
       };
     // announce only
     case "carol miller":

@@ -281,6 +281,12 @@ a:hover {
   font-family: "Biotif-Book";
   font-size: 18px;
 }
+.letter a{
+  color:#e56b6f
+}
+.letter a:hover{
+  color:#e9c36a
+}
 
 .signature {
   font-family: "The Philadelphia Story";
@@ -294,7 +300,9 @@ a:hover {
   background-color: #e9c46a;
   border: none;
   padding: 0px;
+cursor: pointer;
 }
+
 
 .countdown:hover {
   background-color: #f4a261;
