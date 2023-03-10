@@ -440,7 +440,7 @@ export const Home = (): JSX.Element => {
                     <hr style={{ width: "272px", float: "left" }} />
                     <br />
                     <h3 className="costs">
-                      Accomodation, chef, maid-service and gratutities:
+                      Accomodation, chef, maid-service:
                     </h3>
                     <p className="costs"> 595</p>
                     <br />
